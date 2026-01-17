@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { langFromParams, t, withLang, SUPPORTED } from "../../lib/i18n";
+
+export const getStaticPaths = () => SUPPORTED.map((lang) => ({ params: { lang } }));
+
+const lang = langFromParams(Astro.params);
+const c = t(lang);
+---
+<BaseLayout title={`${c.faq.title} ? IDEX Praxis`} description={c.meta.desc} lang={lang}>
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <div class="kicker">FAQ</div>
+        <h1 class="hero-title" style="margin-top:12px;">{c.faq.title}</h1>
+        <p style="margin-top:14px;">{c.faq.intro}</p>
+
+        <div class="grid" style="margin-top:18px;">
+          {c.faq.items.map((it) => (
+            <details class="accordion">
+              <summary>{it.q}</summary>
+              <p>{it.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    lang={lang}
+    title="Nog een vraag?"
+    body="Stuur gerust een bericht. Ik denk met je mee en geef snel aan wat de beste eerste stap is."
+    primaryHref={withLang(lang, "contact")}
+    primaryLabel={c.cta.kennismaking}
+    secondaryHref={withLang(lang, "cases")}
+    secondaryLabel={c.cta.cases}
+  />
+</BaseLayout>

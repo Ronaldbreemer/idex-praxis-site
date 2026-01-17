@@ -1,0 +1,83 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { langFromParams, t, SUPPORTED } from "../../lib/i18n";
+
+export const getStaticPaths = () => SUPPORTED.map((lang) => ({ params: { lang } }));
+
+const lang = langFromParams(Astro.params);
+const c = t(lang);
+
+const mailtoScript = String.raw`(() => {
+  const form = document.querySelector("[data-mailto-form]");
+  if (!form) return;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = form.querySelector("[name=name]").value || "";
+    const email = form.querySelector("[name=email]").value || "";
+    const msg = form.querySelector("[name=message]").value || "";
+
+    const subject = encodeURIComponent("IDEX Praxis ? Website contact");
+    const body = encodeURIComponent(
+      "Naam: " + name + "
+" +
+      "E-mail: " + email + "
+
+" +
+      msg
+    );
+
+    window.location.href = "mailto:info@idexpraxis.nl?subject=" + subject + "&body=" + body;
+  });
+})();`;
+---
+<BaseLayout title={`${c.contact.title} ? IDEX Praxis`} description={c.meta.desc} lang={lang}>
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <div class="kicker">Contact</div>
+        <h1 class="hero-title" style="margin-top:12px;">{c.contact.title}</h1>
+        <p style="margin-top:14px;">{c.contact.intro}</p>
+
+        <div class="split" style="margin-top:18px;">
+          <div class="card" style="box-shadow:none;">
+            <h3>{c.contact.company}</h3>
+            <p style="margin-top:10px;">
+              {c.contact.address.map((line) => (<>{line}<br /></>))}
+            </p>
+
+            <div style="margin-top:14px;" class="badge">
+              <span class="badge-dot"></span>
+              <a href={`tel:${c.contact.phoneTel}`} style="font-weight:850;">{c.contact.phoneLabel}</a>
+            </div>
+
+            <div style="margin-top:10px;" class="badge">
+              <span class="badge-dot"></span>
+              <a href={`mailto:${c.contact.email}`} style="font-weight:850;">{c.contact.email}</a>
+            </div>
+
+            <p style="margin-top:14px; opacity:.78;">
+              {c.contact.kvk}<br />
+              {c.contact.btw}
+            </p>
+          </div>
+
+          <div class="card" style="box-shadow:none;">
+            <h3>{c.contact.formTitle}</h3>
+            <p style="margin-top:10px; opacity:.85;">{c.contact.formNote}</p>
+
+            <form data-mailto-form style="margin-top:14px; display:grid; gap:10px;">
+              <input name="name" placeholder="Naam" class="btn" style="border-radius:14px; justify-content:flex-start;" />
+              <input name="email" placeholder="E-mail" class="btn" style="border-radius:14px; justify-content:flex-start;" />
+              <textarea name="message" placeholder="Bericht" rows="6"
+                class="btn" style="border-radius:14px; justify-content:flex-start; padding:12px 14px; line-height:1.4;"></textarea>
+              <button type="submit" class="btn btn-primary">Verstuur</button>
+            </form>
+
+            <script is:inline>{mailtoScript}</script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

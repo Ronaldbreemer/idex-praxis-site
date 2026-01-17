@@ -1,0 +1,37 @@
+---
+---
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>IDEX Praxis</title>
+    <meta http-equiv="refresh" content="1; url=/en/" />
+  </head>
+  <body>
+    <script>
+      (function () {
+        try {
+          var pref = (navigator.language || "en").toLowerCase();
+          var lang = pref.indexOf("nl") === 0 ? "nl" : pref.indexOf("it") === 0 ? "it" : "en";
+          var target = "/" + lang + "/";
+          if (location.pathname === "/" && location.search.indexOf("noredirect=1") === -1) {
+            location.replace(target + location.search + location.hash);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Fallback als JS uit staat -->
+    <div style="font-family: system-ui; padding: 20px;">
+      <h1>IDEX Praxis</h1>
+      <p>Kies je taal:</p>
+      <ul>
+        <li><a href="/nl/">Nederlands</a></li>
+        <li><a href="/en/">English</a></li>
+        <li><a href="/it/">Italiano</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

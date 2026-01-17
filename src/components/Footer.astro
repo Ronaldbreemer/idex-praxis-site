@@ -1,0 +1,37 @@
+﻿---
+import { t, withLang } from "../lib/i18n";
+const { lang } = Astro.props;
+const c = t(lang);
+---
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="badge">
+        <span class="badge-dot"></span>
+        <strong>{c.common.brandName}</strong>
+      </div>
+      <p style="margin-top:12px; max-width:55ch;">{c.footer.blurb}</p>
+      <small style="display:block; margin-top:12px; opacity:.8;">© {new Date().getFullYear()} {c.common.brandName}</small>
+    </div>
+
+    <div>
+      <div class="kicker">{c.footer.pagesLabel}</div>
+      <ul class="list">
+        <li><a href={withLang(lang,"cases")}>{c.nav.cases}</a></li>
+        <li><a href={withLang(lang,"faq")}>{c.nav.faq}</a></li>
+        <li><a href={withLang(lang,"contact")}>{c.nav.contact}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="kicker">{c.footer.contactLabel}</div>
+      <ul class="list">
+        <li><a href={`mailto:${c.contact.email}`}>{c.contact.email}</a></li>
+        <li><a href={`tel:${c.contact.phoneTel}`}>{c.contact.phoneLabel}</a></li>
+      </ul>
+      <div style="margin-top:14px;">
+        <a class="btn" href={withLang(lang,"contact")}>{c.cta.kennismaking}</a>
+      </div>
+    </div>
+  </div>
+</footer>

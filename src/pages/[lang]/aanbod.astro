@@ -1,0 +1,52 @@
+﻿---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { langFromParams, t, withLang, SUPPORTED } from "../../lib/i18n";
+
+export const getStaticPaths = () => SUPPORTED.map((lang) => ({ params: { lang } }));
+
+const lang = langFromParams(Astro.params);
+const c = t(lang);
+---
+<BaseLayout title={`${c.aanbod.title} - IDEX Praxis`} description={c.meta.desc} lang={lang}>
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <div class="kicker">{c.aanbod.kicker}</div>
+        <h1 class="hero-title" style="margin-top:12px;">{c.aanbod.title}</h1>
+        <p style="margin-top:14px; max-width:85ch;">{c.aanbod.intro}</p>
+
+        <div class="grid cards-3" style="margin-top:18px;">
+          {c.aanbod.items.map((it) => (
+            <div class="card">
+              <h3>{it.t}</h3>
+              <p style="margin-top:10px;">{it.d}</p>
+              <div style="margin-top:12px;" class="badge">
+                <span class="badge-dot"></span>
+                <span style="font-weight:850;">{it.price}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p style="margin-top:14px; opacity:.78;">{c.aanbod.note}</p>
+
+        <div class="btn-row">
+          <a class="btn btn-primary" href={withLang(lang, "contact")}>{c.cta.kennismaking}</a>
+          <a class="btn" href={withLang(lang, "cases")}>{c.cta.cases}</a>
+          <a class="btn" href={withLang(lang, "faq")}>{c.cta.faq}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    lang={lang}
+    title={c.aanbod.ctaTitle}
+    body={c.aanbod.ctaBody}
+    primaryHref={withLang(lang, "contact")}
+    primaryLabel={c.cta.kennismaking}
+    secondaryHref={withLang(lang, "werkwijze")}
+    secondaryLabel={c.nav.werkwijze}
+  />
+</BaseLayout>

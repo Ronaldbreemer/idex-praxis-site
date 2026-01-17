@@ -1,0 +1,143 @@
+﻿---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { langFromParams, t, withLang, SUPPORTED } from "../../lib/i18n";
+
+export const getStaticPaths = () => SUPPORTED.map((lang) => ({ params: { lang } }));
+
+const lang = langFromParams(Astro.params);
+const c = t(lang);
+---
+<BaseLayout title={c.meta.title} description={c.meta.desc} lang={lang}>
+  <section class="section hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div>
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span class="kicker">{c.home.heroKicker}</span>
+          </div>
+          <h1 class="hero-title" style="margin-top:16px;">{c.home.heroTitle}</h1>
+          <p class="hero-sub">{c.home.heroSub}</p>
+          <small style="display:block; margin-top:10px; opacity:.8;">{c.home.heroForWho}</small>
+
+          <div class="btn-row">
+            <a class="btn btn-primary" href={withLang(lang,"contact")}>{c.cta.kennismaking}</a>
+            <a class="btn" href={withLang(lang,"aanbod")}>{c.cta.scan}</a>
+          </div>
+          <small style="display:block; margin-top:8px; opacity:.7;">{c.home.scanHint}</small>
+
+          <div class="stat-row">
+            {c.home.stats.map((s) => (
+              <div class="stat">
+                <strong>{s.n}</strong>
+                <span>{s.l}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="hero-orb">
+          <div style="position:relative; z-index:1;">
+            <div class="kicker">{c.home.heroOrbKicker}</div>
+            <h3 style="margin-top:10px;">{c.home.heroOrbTitle}</h3>
+            <p style="margin-top:10px; opacity:.9;">{c.home.heroOrbBody}</p>
+            <p style="margin-top:8px; opacity:.75;">{c.home.heroOrbExample}</p>
+
+            <div style="margin-top:16px;" class="badge">
+              <span class="badge-dot"></span>
+              <span style="font-weight:850;">{c.home.heroOrbBadgeTitle}</span>
+              <span style="opacity:.75;">{c.home.heroOrbBadgeSubtitle}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid cards-3" style="margin-top:22px;">
+        {c.home.promises.map((p) => (
+          <div class="card">
+            <h3>{p.t}</h3>
+            <p style="margin-top:10px;">{p.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="card">
+        <div class="kicker">{c.home.herkenbaarTitle}</div>
+        <h2 style="margin-top:10px;">{c.home.herkenbaarHeading}</h2>
+        <p style="margin-top:12px;">{c.home.herkenbaarBody}</p>
+      </div>
+
+      <div class="card">
+        <div class="kicker">{c.home.watJeKrijgtTitle}</div>
+        <h3 style="margin-top:10px;">{c.home.watJeKrijgtIntro}</h3>
+        <ul class="list" style="margin-top:12px;">
+          {c.home.watJeKrijgtBullets.map((b) => (
+            <li class="li">
+              <span class="check" aria-hidden="true"></span>
+              <p>{b}</p>
+            </li>
+          ))}
+        </ul>
+
+        <details class="tooltip">
+          <summary>{c.home.tooltipTitle}</summary>
+          <p style="margin-top:10px;">{c.home.tooltipBody}</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <div class="kicker">{c.home.hoeWerktTitle}</div>
+        <h2 style="margin-top:10px;">{c.home.hoeWerktHeading}</h2>
+
+        <div class="grid" style="margin-top:16px;">
+          {c.home.hoeWerktSteps.map((s) => (
+            <div class="card" style="box-shadow:none;">
+              <h3>{s[0]}</h3>
+              <p style="margin-top:8px;">{s[1]}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="btn-row">
+          <a class="btn btn-primary" href={withLang(lang,"aanbod")}>{c.cta.aanbod}</a>
+          <a class="btn" href={withLang(lang,"cases")}>{c.cta.cases}</a>
+          <a class="btn" href={withLang(lang,"faq")}>{c.cta.faq}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="card">
+        <div class="kicker">{c.home.prijsTitle}</div>
+        <h2 style="margin-top:10px;">{c.home.prijsHeading}</h2>
+        <p style="margin-top:12px;">{c.home.prijsBody}</p>
+      </div>
+      <div class="card">
+        <div class="kicker">{c.home.securityTitle}</div>
+        <h2 style="margin-top:10px;">{c.home.securityHeading}</h2>
+        <p style="margin-top:12px;">{c.home.securityBody}</p>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    lang={lang}
+    title={c.home.bottomCtaTitle}
+    body={c.home.bottomCtaBody}
+    primaryHref={withLang(lang,"contact")}
+    primaryLabel={c.cta.kennismaking}
+    secondaryHref={withLang(lang,"aanbod")}
+    secondaryLabel={c.cta.scan}
+  />
+</BaseLayout>

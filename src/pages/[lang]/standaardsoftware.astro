@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { langFromParams, t, withLang, SUPPORTED } from "../../lib/i18n";
+
+export const getStaticPaths = () => SUPPORTED.map((lang) => ({ params: { lang } }));
+
+const lang = langFromParams(Astro.params);
+const c = t(lang);
+---
+<BaseLayout title={`${c.standaard.title} ? IDEX Praxis`} description={c.meta.desc} lang={lang}>
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <div class="kicker">Vergelijking</div>
+        <h1 class="hero-title" style="margin-top:12px;">{c.standaard.title}</h1>
+        <p style="margin-top:14px; max-width:90ch;">{c.standaard.intro}</p>
+
+        <div class="split" style="margin-top:18px;">
+          <div class="card" style="box-shadow:none;">
+            <h3>{c.standaard.whenStdTitle}</h3>
+            <ul class="list">
+              {c.standaard.whenStd.map((x) => (
+                <li class="li"><span class="check"></span><p>{x}</p></li>
+              ))}
+            </ul>
+          </div>
+          <div class="card" style="box-shadow:none;">
+            <h3>{c.standaard.whenIdexTitle}</h3>
+            <ul class="list">
+              {c.standaard.whenIdex.map((x) => (
+                <li class="li"><span class="check"></span><p>{x}</p></li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2 style="margin-top:18px;">{c.standaard.tableTitle}</h2>
+        <div style="margin-top:12px; overflow:auto;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Onderdeel</th>
+                <th>Standaard / low-code</th>
+                <th>IDEX Praxis</th>
+              </tr>
+            </thead>
+            <tbody>
+              {c.standaard.table.map((row) => (
+                <tr>
+                  <td><strong>{row[0]}</strong></td>
+                  <td>{row[1]}</td>
+                  <td>{row[2]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    lang={lang}
+    title="Twijfel je wat bij je past?"
+    body="Plan een kennismaking (15 min). Daarna is snel duidelijk of standaardsoftware volstaat, of dat een eerste werkbare versie op maat juist tijd en frustratie bespaart."
+    primaryHref={withLang(lang, "contact")}
+    primaryLabel={c.cta.kennismaking}
+    secondaryHref={withLang(lang, "aanbod")}
+    secondaryLabel={c.cta.aanbod}
+  />
+</BaseLayout>

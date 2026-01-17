@@ -1,0 +1,45 @@
+﻿---
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+import { t, withLang } from "../lib/i18n";
+
+const { lang } = Astro.props;
+const c = t(lang);
+const pathName = Astro.url.pathname;
+const isActive = (href: string) => pathName === href || pathName === href.replace(/\/$/, "") || pathName.startsWith(href);
+---
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href={withLang(lang, "")} aria-label={c.common.brandName}>
+      <img src="/logo.png" alt={c.common.logoAlt} loading="eager" />
+      <span>{c.common.brandName}</span>
+    </a>
+
+    <nav class="navlinks" aria-label={c.common.primaryNavLabel}>
+      <a class={isActive(withLang(lang, "")) ? "active" : ""} href={withLang(lang, "")}>{c.nav.home}</a>
+      <a class={isActive(withLang(lang, "werkwijze")) ? "active" : ""} href={withLang(lang, "werkwijze")}>{c.nav.werkwijze}</a>
+      <a class={isActive(withLang(lang, "standaardsoftware")) ? "active" : ""} href={withLang(lang, "standaardsoftware")}>{c.nav.vergelijking}</a>
+      <a class={isActive(withLang(lang, "aanbod")) ? "active" : ""} href={withLang(lang, "aanbod")}>{c.nav.aanbod}</a>
+      <a class={isActive(withLang(lang, "contact")) ? "active" : ""} href={withLang(lang, "contact")}>{c.nav.contact}</a>
+    </nav>
+
+    <div style="display:flex; gap:10px; align-items:center;">
+      <LanguageSwitcher lang={lang} pathname={Astro.url.pathname} />
+      <div class="mobile">
+        <details>
+          <summary aria-label={c.common.menuLabel}>{c.common.menuLabel}</summary>
+          <div class="panel" role="menu">
+            <a href={withLang(lang, "")} role="menuitem">{c.nav.home}</a>
+            <a href={withLang(lang, "werkwijze")} role="menuitem">{c.nav.werkwijze}</a>
+            <a href={withLang(lang, "standaardsoftware")} role="menuitem">{c.nav.vergelijking}</a>
+            <a href={withLang(lang, "aanbod")} role="menuitem">{c.nav.aanbod}</a>
+            <a href={withLang(lang, "cases")} role="menuitem">{c.nav.cases}</a>
+            <a href={withLang(lang, "faq")} role="menuitem">{c.nav.faq}</a>
+            <a href={withLang(lang, "contact")} role="menuitem">{c.nav.contact}</a>
+            <div class="hr"></div>
+            <LanguageSwitcher lang={lang} pathname={Astro.url.pathname} />
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</header>
