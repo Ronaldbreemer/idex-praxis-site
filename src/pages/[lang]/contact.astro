@@ -7,37 +7,21 @@ export const getStaticPaths = () => SUPPORTED.map((lang) => ({ params: { lang } 
 const lang = langFromParams(Astro.params);
 const c = t(lang);
 
-const mailtoScript = String.raw`(() => {
-  const form = document.querySelector("[data-mailto-form]");
-  if (!form) return;
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const name = form.querySelector("[name=name]").value || "";
-    const email = form.querySelector("[name=email]").value || "";
-    const msg = form.querySelector("[name=message]").value || "";
-
-    const subject = encodeURIComponent("IDEX Praxis ? Website contact");
-    const body = encodeURIComponent(
-      "Naam: " + name + "
-" +
-      "E-mail: " + email + "
-
-" +
-      msg
-    );
-
-    window.location.href = "mailto:info@idexpraxis.nl?subject=" + subject + "&body=" + body;
-  });
-})();`;
+const sent = Astro.url.searchParams.get("sent") === "1";
 ---
 <BaseLayout title={`${c.contact.title} ? IDEX Praxis`} description={c.meta.desc} lang={lang}>
   <section class="section">
     <div class="container">
       <div class="card">
-        <div class="kicker">Contact</div>
+        <div class="kicker">{c.contact.kicker}</div>
         <h1 class="hero-title" style="margin-top:12px;">{c.contact.title}</h1>
         <p style="margin-top:14px;">{c.contact.intro}</p>
+        {sent ? (
+          <div class="badge" style="margin-top:14px;">
+            <span class="badge-dot"></span>
+            <span style="font-weight:750;">{c.contact.formSuccess}</span>
+          </div>
+        ) : null}
 
         <div class="split" style="margin-top:18px;">
           <div class="card" style="box-shadow:none;">
@@ -66,15 +50,14 @@ const mailtoScript = String.raw`(() => {
             <h3>{c.contact.formTitle}</h3>
             <p style="margin-top:10px; opacity:.85;">{c.contact.formNote}</p>
 
-            <form data-mailto-form style="margin-top:14px; display:grid; gap:10px;">
-              <input name="name" placeholder="Naam" class="btn" style="border-radius:14px; justify-content:flex-start;" />
-              <input name="email" placeholder="E-mail" class="btn" style="border-radius:14px; justify-content:flex-start;" />
-              <textarea name="message" placeholder="Bericht" rows="6"
+            <form action="/api/contact/" method="post" style="margin-top:14px; display:grid; gap:10px;">
+              <input type="hidden" name="lang" value={lang} />
+              <input name="name" placeholder={c.contact.formPlaceholders.name} class="btn" style="border-radius:14px; justify-content:flex-start;" />
+              <input name="email" placeholder={c.contact.formPlaceholders.email} class="btn" style="border-radius:14px; justify-content:flex-start;" />
+              <textarea name="message" placeholder={c.contact.formPlaceholders.message} rows="6"
                 class="btn" style="border-radius:14px; justify-content:flex-start; padding:12px 14px; line-height:1.4;"></textarea>
-              <button type="submit" class="btn btn-primary">Verstuur</button>
+              <button type="submit" class="btn btn-primary">{c.contact.formSubmit}</button>
             </form>
-
-            <script is:inline>{mailtoScript}</script>
           </div>
         </div>
       </div>

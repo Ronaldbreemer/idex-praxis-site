@@ -12,7 +12,7 @@ const c = t(lang);
   <section class="section">
     <div class="container">
       <div class="card">
-        <div class="kicker">IDEX Praxis</div>
+        <div class="kicker">{c.werkwijze.kicker}</div>
         <h1 class="hero-title" style="margin-top:12px;">{c.werkwijze.title}</h1>
         <p style="margin-top:14px; max-width:80ch;">{c.werkwijze.intro}</p>
 
@@ -32,7 +32,17 @@ const c = t(lang);
             <h2>{c.werkwijze.continuityTitle}</h2>
             <p style="margin-top:12px;">{c.werkwijze.continuityBody}</p>
           </div>
-          <div class="hero-orb" aria-hidden="true"></div>
+          <div class="hero-orb" aria-hidden="true">
+            <div class="mini-flow">
+              <div class="mini-flow-title">{c.werkwijze.miniFlow.title}</div>
+              {c.werkwijze.miniFlow.steps.map((step) => (
+                <div class="mini-flow-row">
+                  <span class="mini-flow-dot"></span>
+                  {step}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -40,8 +50,8 @@ const c = t(lang);
 
   <CTA
     lang={lang}
-    title="Kies samen de beste eerste kernworkflow."
-    body="Plan een kennismaking (15 min). Daarna is snel duidelijk wat de slimste eerste stap is."
+    title={c.werkwijze.ctaTitle}
+    body={c.werkwijze.ctaBody}
     primaryHref={withLang(lang, "contact")}
     primaryLabel={c.cta.kennismaking}
     secondaryHref={withLang(lang, "aanbod")}

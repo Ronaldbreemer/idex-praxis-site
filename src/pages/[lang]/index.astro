@@ -38,16 +38,33 @@ const c = t(lang);
         </div>
 
         <div class="hero-orb">
-          <div style="position:relative; z-index:1;">
-            <div class="kicker">{c.home.heroOrbKicker}</div>
-            <h3 style="margin-top:10px;">{c.home.heroOrbTitle}</h3>
-            <p style="margin-top:10px; opacity:.9;">{c.home.heroOrbBody}</p>
-            <p style="margin-top:8px; opacity:.75;">{c.home.heroOrbExample}</p>
-
-            <div style="margin-top:16px;" class="badge">
-              <span class="badge-dot"></span>
-              <span style="font-weight:850;">{c.home.heroOrbBadgeTitle}</span>
-              <span style="opacity:.75;">{c.home.heroOrbBadgeSubtitle}</span>
+          <div class="mini-ui">
+            <div class="mini-ui-header">
+              <div class="mini-ui-dot"></div>
+              <strong>{c.home.heroOrbUi.header}</strong>
+              <span>{c.home.heroOrbUi.time}</span>
+            </div>
+            <div class="mini-ui-body">
+              <div class="mini-row">
+                <div class="mini-label">{c.home.heroOrbUi.clientLabel}</div>
+                <div class="mini-value">{c.home.heroOrbUi.clientValue}</div>
+              </div>
+              <div class="mini-row">
+                <div class="mini-label">{c.home.heroOrbUi.goalLabel}</div>
+                <div class="mini-value">{c.home.heroOrbUi.goalValue}</div>
+              </div>
+              <div class="mini-row">
+                <div class="mini-label">{c.home.heroOrbUi.statusLabel}</div>
+                <div class="mini-pill">{c.home.heroOrbUi.statusValue}</div>
+              </div>
+            </div>
+            <div class="mini-ui-footer">
+              {c.home.heroOrbUi.steps.map((step) => (
+                <div class="mini-step">
+                  <span class="mini-step-dot"></span>
+                  {step}
+                </div>
+              ))}
             </div>
           </div>
         </div>

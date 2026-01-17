@@ -1,12 +1,16 @@
 ---
 ---
 <!doctype html>
+---
+import { t } from "../lib/i18n";
+const c = t("nl");
+---
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
-    <title>IDEX Praxis</title>
+    <title>{c.root.title}</title>
     <meta http-equiv="refresh" content="1; url=/en/" />
   </head>
   <body>
@@ -25,12 +29,12 @@
 
     <!-- Fallback als JS uit staat -->
     <div style="font-family: system-ui; padding: 20px;">
-      <h1>IDEX Praxis</h1>
-      <p>Kies je taal:</p>
+      <h1>{c.root.title}</h1>
+      <p>{c.root.chooseLanguage}</p>
       <ul>
-        <li><a href="/nl/">Nederlands</a></li>
-        <li><a href="/en/">English</a></li>
-        <li><a href="/it/">Italiano</a></li>
+        <li><a href="/nl/">{c.root.languages.nl}</a></li>
+        <li><a href="/en/">{c.root.languages.en}</a></li>
+        <li><a href="/it/">{c.root.languages.it}</a></li>
       </ul>
     </div>
   </body>

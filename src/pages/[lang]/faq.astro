@@ -12,7 +12,7 @@ const c = t(lang);
   <section class="section">
     <div class="container">
       <div class="card">
-        <div class="kicker">FAQ</div>
+        <div class="kicker">{c.faq.kicker}</div>
         <h1 class="hero-title" style="margin-top:12px;">{c.faq.title}</h1>
         <p style="margin-top:14px;">{c.faq.intro}</p>
 
@@ -20,7 +20,9 @@ const c = t(lang);
           {c.faq.items.map((it) => (
             <details class="accordion">
               <summary>{it.q}</summary>
-              <p>{it.a}</p>
+              <p class="faq-short">{it.short}</p>
+              <p class="faq-long">{it.long}</p>
+              {it.note ? <p class="faq-note">{it.note}</p> : null}
             </details>
           ))}
         </div>
@@ -30,8 +32,8 @@ const c = t(lang);
 
   <CTA
     lang={lang}
-    title="Nog een vraag?"
-    body="Stuur gerust een bericht. Ik denk met je mee en geef snel aan wat de beste eerste stap is."
+    title={c.faq.ctaTitle}
+    body={c.faq.ctaBody}
     primaryHref={withLang(lang, "contact")}
     primaryLabel={c.cta.kennismaking}
     secondaryHref={withLang(lang, "cases")}

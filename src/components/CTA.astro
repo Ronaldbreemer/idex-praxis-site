@@ -10,8 +10,8 @@ const c = t(lang);
       <div class="split">
         <div>
           <div class="kicker">{c.ctaPanel.kicker}</div>
-          <h2 style="margin-top:10px;">{title}</h2>
-          <p style="margin-top:12px; max-width:65ch;">{body}</p>
+          <h2 class="cta-title" style="margin-top:10px;">{title}</h2>
+          <p class="cta-body" style="margin-top:12px; max-width:65ch;">{body}</p>
           <div class="btn-row">
             <a class="btn btn-primary" href={primaryHref}>{primaryLabel}</a>
             {secondaryHref && secondaryLabel ? (
@@ -19,7 +19,7 @@ const c = t(lang);
             ) : null}
           </div>
         </div>
-        <div class="hero-orb" aria-hidden="true">
+        <div class="hero-orb cta-orb" aria-hidden="true">
           <div style="position:relative; z-index:1;">
             <div class="badge">
               <span class="badge-dot"></span>
