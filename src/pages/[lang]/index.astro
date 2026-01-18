@@ -1,13 +1,14 @@
 ﻿---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
-import { langFromParams, t, withLang, SUPPORTED } from "../../lib/i18n";
+import * as i18n from "../../lib/i18n";
 
 export const prerender = true;
-export const getStaticPaths = () => SUPPORTED.map((lang) => ({ params: { lang } }));
+export const getStaticPaths = () =>
+  i18n.SUPPORTED.map((lang) => ({ params: { lang } }));
 
-const lang = langFromParams(Astro.params);
-const c = t(lang);
+const lang = i18n.langFromParams(Astro.params);
+const c = i18n.t(lang);
 const herkenbaarSentences = c.home.herkenbaarBody
   .split(". ")
   .map((s) => s.trim())
@@ -45,8 +46,8 @@ const herkenbaarBullets = herkenbaarBulletParts;
           <small style="display:block; margin-top:10px; opacity:.8;">{c.home.heroForWho}</small>
 
           <div class="btn-row">
-            <a class="btn btn-primary" href={withLang(lang,"contact")}>{c.cta.kennismaking}</a>
-            <a class="btn" href={withLang(lang,"aanbod")}>{c.cta.scan}</a>
+            <a class="btn btn-primary" href={i18n.withLang(lang, "contact")}>{c.cta.kennismaking}</a>
+            <a class="btn" href={i18n.withLang(lang, "aanbod")}>{c.cta.scan}</a>
           </div>
           <small style="display:block; margin-top:8px; opacity:.7;">{c.home.scanHint}</small>
 
@@ -162,9 +163,9 @@ const herkenbaarBullets = herkenbaarBulletParts;
         </div>
 
         <div class="btn-row">
-          <a class="btn btn-primary" href={withLang(lang,"aanbod")}>{c.cta.aanbod}</a>
-          <a class="btn" href={withLang(lang,"cases")}>{c.cta.cases}</a>
-          <a class="btn" href={withLang(lang,"faq")}>{c.cta.faq}</a>
+          <a class="btn btn-primary" href={i18n.withLang(lang, "aanbod")}>{c.cta.aanbod}</a>
+          <a class="btn" href={i18n.withLang(lang, "cases")}>{c.cta.cases}</a>
+          <a class="btn" href={i18n.withLang(lang, "faq")}>{c.cta.faq}</a>
         </div>
       </div>
     </div>
@@ -189,9 +190,9 @@ const herkenbaarBullets = herkenbaarBulletParts;
     lang={lang}
     title={c.home.bottomCtaTitle}
     body={c.home.bottomCtaBody}
-    primaryHref={withLang(lang,"contact")}
+    primaryHref={i18n.withLang(lang, "contact")}
     primaryLabel={c.cta.kennismaking}
-    secondaryHref={withLang(lang,"aanbod")}
+    secondaryHref={i18n.withLang(lang, "aanbod")}
     secondaryLabel={c.cta.scan}
   />
 </BaseLayout>
