@@ -3,6 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { langFromParams, t, withLang, SUPPORTED } from "../../lib/i18n";
 
+export const prerender = true;
 export const getStaticPaths = () => SUPPORTED.map((lang) => ({ params: { lang } }));
 
 const lang = langFromParams(Astro.params);
