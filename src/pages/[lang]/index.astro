@@ -7,6 +7,28 @@ export const getStaticPaths = () => SUPPORTED.map((lang) => ({ params: { lang } 
 
 const lang = langFromParams(Astro.params);
 const c = t(lang);
+const herkenbaarSentences = c.home.herkenbaarBody
+  .split(". ")
+  .map((s) => s.trim())
+  .filter(Boolean);
+const herkenbaarParts = herkenbaarSentences.flatMap((sentence, index) => {
+  if (index === 0 && sentence.includes("? ")) {
+    const [q, rest] = sentence.split("? ");
+    return [`${q}?`, rest];
+  }
+  if (index === 1 && sentence.includes(", zodat ")) {
+    const [main, payoff] = sentence.split(", zodat ");
+    return [main, `zodat ${payoff}`];
+  }
+  return [sentence];
+});
+const herkenbaarBulletParts = herkenbaarParts.map((s) => (s.endsWith(".") ? s : `${s}.`));
+if (herkenbaarBulletParts.length > 3) {
+  const rest = herkenbaarBulletParts.slice(3).join(" ");
+  herkenbaarBulletParts[2] = `${herkenbaarBulletParts[2]} ${rest}`.trim();
+  herkenbaarBulletParts.length = 3;
+}
+const herkenbaarBullets = herkenbaarBulletParts;
 ---
 <BaseLayout title={c.meta.title} description={c.meta.desc} lang={lang}>
   <section class="section hero">
@@ -70,9 +92,16 @@ const c = t(lang);
         </div>
       </div>
 
-      <div class="grid cards-3" style="margin-top:22px;">
+      <div class="grid cards-3" style="margin-top:12px;">
         {c.home.promises.map((p) => (
-          <div class="card">
+          <div
+            class="card"
+            style={
+              p.t === c.home.promises[1].t
+                ? "border-top:4px solid rgba(242,210,27,.75); background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,255,255,.78));"
+                : "border-top:3px solid rgba(242,210,27,.45);"
+            }
+          >
             <h3>{p.t}</h3>
             <p style="margin-top:10px;">{p.d}</p>
           </div>
@@ -81,15 +110,22 @@ const c = t(lang);
     </div>
   </section>
 
-  <section class="section">
-    <div class="container split">
-      <div class="card">
+  <section class="section" style="padding-top:36px;">
+    <div class="container split" style="align-items:flex-start;">
+      <div class="card" style="border-top:3px solid rgba(31,174,96,.35); align-self:flex-start;">
         <div class="kicker">{c.home.herkenbaarTitle}</div>
         <h2 style="margin-top:10px;">{c.home.herkenbaarHeading}</h2>
-        <p style="margin-top:12px;">{c.home.herkenbaarBody}</p>
+        <ul class="list" style="margin-top:6px;">
+          {herkenbaarBullets.map((b) => (
+            <li class="li">
+              <span class="check" aria-hidden="true"></span>
+              <p>{b}</p>
+            </li>
+          ))}
+        </ul>
       </div>
 
-      <div class="card">
+      <div class="card" style="border-top:3px solid rgba(31,174,96,.35);">
         <div class="kicker">{c.home.watJeKrijgtTitle}</div>
         <h3 style="margin-top:10px;">{c.home.watJeKrijgtIntro}</h3>
         <ul class="list" style="margin-top:12px;">
@@ -117,7 +153,7 @@ const c = t(lang);
 
         <div class="grid" style="margin-top:16px;">
           {c.home.hoeWerktSteps.map((s) => (
-            <div class="card" style="box-shadow:none;">
+            <div class="card" style="box-shadow:none; border-top:3px solid rgba(31,174,96,.35);">
               <h3>{s[0]}</h3>
               <p style="margin-top:8px;">{s[1]}</p>
             </div>

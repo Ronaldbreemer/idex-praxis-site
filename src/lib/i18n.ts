@@ -61,7 +61,7 @@ export const copy = {
     ctaPanel: {
       kicker: "Volgende stap",
       badgeTitle: "Praxis",
-      badgeSubtitle: "Prima versione",
+      badgeSubtitle: "Eerste versie",
       stats: [
         { n: "15", l: "min intake" },
         { n: "1", l: "kernworkflow" },
@@ -97,7 +97,7 @@ export const copy = {
       promises: [
         { t: "Overzicht & rust", d: "Alles terugvindbaar, met rollen en rechten." },
         { t: "Privacy-by-design", d: "Duidelijke afspraken over opslag, toegang en bewaartermijnen." },
-        { t: "Workflow op maat", d: "Intake -> doelen -> sessies -> oefeningen -> evaluatie." },
+        { t: "Workflow op maat", d: "Intake -> doelen -> sessies -> oefeningen -> evaluatie. Het kan ook anders." },
       ],
       stats: [
         { n: "1", l: "kernworkflow eerst" },
@@ -107,7 +107,7 @@ export const copy = {
       ],
       herkenbaarTitle: "Herkenbaar?",
       herkenbaarBody:
-        "Werk je met losse documenten, notities en tools? Dan gaat er ongemerkt veel tijd naar administratie. IDEX Praxis brengt structuur: clientinformatie, stappen in het traject en oefeningen op een plek, zodat jij meer aandacht overhoudt voor het contact.",
+        "Werk je met losse documenten, notities en tools? Dan gaat er ongemerkt veel tijd naar administratie. IDEX Praxis brengt structuur: clientinformatie, stappen in het traject en oefeningen op een plek, Zodat je meer tijd overhoudt voor het contact.",
       watJeKrijgtTitle: "Wat je krijgt",
       watJeKrijgtIntro:
         "Standaardsoftware is 'one size fits most'. Praxis is voor 'one size fits jouw praktijk'.",
@@ -199,7 +199,7 @@ export const copy = {
     aanbod: {
       title: "Aanbod",
       intro:
-        "Je kunt direct klein starten. Of je begint met zekerheid via een scan. Alles is gericht op een eerste versie die in de praktijk prettig loopt.",
+        "Je kan direct klein starten of beginnen met de zekerheid van eerst een scan. Alles is gericht op een eerste versie die in de praktijk prettig loopt.",
       items: [
         {
           t: "Kennismaking (15 min)",
@@ -217,8 +217,7 @@ export const copy = {
           price: "Vaak €2.500 - €6.000",
         },
       ],
-      note:
-        "Wil je dat 'Plan kennismaking' naar Calendly of een boekingspagina gaat? Vervang dan de link in de CTA-component.",
+      note: "",
     },
 
     cases: {
@@ -272,7 +271,7 @@ export const copy = {
           q: "Is mijn clientdata veilig?",
           short: "Kort antwoord: Ja. Veiligheid en privacy zijn onderdeel van het ontwerp en de oplevering.",
           long:
-            "IDEX Praxis wordt gebouwd met een professionele basis (Java Spring Boot + Spring Security) en ingericht om clientdata veilig en zorgvuldig te verwerken. Standaard borgen we o.a.: rollen & rechten (RBAC), veilige authenticatie (wachtwoorden gehasht), versleutelde verbindingen (HTTPS/TLS), afgeschermde dataopslag, logging (waar passend) en back-ups/herstelafspraken. AVG-aspecten zoals dataminimalisatie, transparantie over hosting/toegang/bewaartermijnen en een verwerkersovereenkomst (waar nodig) worden vooraf vastgelegd. Geen enkel systeem is 100% risicovrij; daarom combineren we techniek met werkafspraken (accountbeheer, sterke wachtwoorden). Indien gewenst kunnen extra maatregelen zoals 2FA of strengere logging worden afgesproken.",
+            "Applicaties van IDEX Praxis worden gebouwd met een professionele basis (Java Spring Boot + Spring Security) en ingericht om clientdata veilig en zorgvuldig te verwerken. Standaard borgen we o.a.: rollen & rechten (RBAC), veilige authenticatie (wachtwoorden gehasht), versleutelde verbindingen (HTTPS/TLS), afgeschermde dataopslag, logging (waar passend) en back-ups/herstelafspraken. AVG-aspecten zoals dataminimalisatie, transparantie over hosting/toegang/bewaartermijnen en een verwerkersovereenkomst (waar nodig) worden vooraf vastgelegd. Geen enkel systeem is 100% risicovrij; daarom combineren we techniek met werkafspraken (accountbeheer, sterke wachtwoorden). Indien gewenst kunnen extra maatregelen zoals 2FA of strengere logging worden afgesproken.",
         },
         {
           q: "Waar staat mijn data?",
@@ -369,230 +368,296 @@ export const copy = {
 
   en: {
     meta: {
-      title: "IDEX Praxis - Software that follows your practice workflow",
-      desc: "One secure place for intake, sessions and progress - without forcing you into generic software.",
+      title: "IDEX Praxis - Practice software that follows your way of working",
+      desc: "A safe place for intake, trajectories and progress - without you having to adapt your method to standard software.",
     },
     common: {
       brandName: "IDEX Praxis",
       logoAlt: "IDEX Praxis logo",
-      primaryNavLabel: "Primary navigation",
+      primaryNavLabel: "Main menu",
       menuLabel: "Menu",
       languageSwitcherLabel: "Language",
     },
-    nav: { home: "Home", werkwijze: "Approach", vergelijking: "Comparison", aanbod: "Offer", contact: "Contact", cases: "Cases", faq: "FAQ" },
-    cta: { kennismaking: "Book a 15-min intro", scan: "Praxis Scan (€750)", aanbod: "See the offer", cases: "View cases", faq: "Read FAQ" },
+    nav: {
+      home: "Home",
+      werkwijze: "Method",
+      vergelijking: "Comparison",
+      aanbod: "Offer",
+      contact: "Contact",
+      cases: "Cases",
+      faq: "FAQ",
+    },
+    cta: {
+      kennismaking: "Schedule an intro (15 min)",
+      scan: "Praxis Scan (€750)",
+      aanbod: "View the offer",
+      cases: "View cases",
+      faq: "Read the FAQ",
+    },
     ctaPanel: {
       kicker: "Next step",
       badgeTitle: "Praxis",
-      badgeSubtitle: "Prima versione",
+      badgeSubtitle: "First version",
       stats: [
-        { n: "15", l: "min intro" },
+        { n: "15", l: "min intake" },
         { n: "1", l: "core workflow" },
         { n: "0", l: "lock-in" },
       ],
     },
     footer: {
-      blurb: "Praxis builds practice software that follows your workflow - secure, clear, and transferable.",
+      blurb: "Praxis builds practice software that follows your way of working - safe, clear and transferable.",
       pagesLabel: "Pages",
       contactLabel: "Contact",
     },
     home: {
       heroKicker: "Custom practice software",
-      heroTitle: "Practice software that follows your workflow.",
+      heroTitle: "Smart practice software that follows your way of working.",
       heroSub:
-        "One secure place for intake, sessions and progress - without forcing your method into a generic package.",
-      heroForWho: "For physiotherapy, psychology, coaching and small practices.",
-      scanHint: "Praxis Scan: plan + roadmap in 1-2 weeks (deductible).",
-      heroOrbTitle: "Workflow - Calm - Time saved",
-      heroOrbBody: "No noise, no lock-in - one clear core flow that works.",
-      heroOrbExample: "Intake -> plan -> sessions -> resoconto -> export",
+        "A safe place for intake, trajectories and progress - without you having to adapt your method to a standard package.",
+      heroForWho: "For e.g. physiotherapy, psychology, coaching and small practices.",
+      scanHint: "Praxis Scan: plan + roadmap in 1-2 weeks (credited).",
+      heroOrbTitle: "Workflow - Calm - Time savings",
+      heroOrbBody: "No noise, no lock-in - a clear core flow that works.",
+      heroOrbExample: "Intake -> plan -> sessions -> report -> export",
       heroOrbUi: {
         header: "Intake - First appointment",
         time: "Today 10:30",
         clientLabel: "Client",
         clientValue: "New client",
         goalLabel: "Goal",
-        goalValue: "Calm and clarity in the process",
+        goalValue: "Calm and overview in the trajectory",
         statusLabel: "Status",
-        statusValue: "In progress",
+        statusValue: "In treatment",
         steps: ["Intake", "Plan", "Session", "Report"],
       },
       promises: [
-        { t: "Clarity & calm", d: "Everything findable, with roles & permissions." },
-        { t: "Privacy fin dall'inizio", d: "Clear agreements on storage, access and retention." },
-        { t: "Workflow-first", d: "Intake -> goals -> sessions -> exercises -> evaluation." },
+        { t: "Overview & calm", d: "Everything retrievable, with roles and permissions." },
+        { t: "Privacy-by-design", d: "Clear agreements about storage, access and retention periods." },
+        { t: "Custom workflow", d: "Intake -> goals -> sessions -> exercises -> evaluation. It can be different too." },
       ],
       stats: [
         { n: "1", l: "core workflow first" },
         { n: "EU", l: "hosting possible" },
         { n: "0", l: "lock-in" },
-        { n: "100%", l: "handover-ready" },
+        { n: "100%", l: "transferable" },
       ],
-      herkenbaarTitle: "Does this sound familiar?",
+      herkenbaarTitle: "Sound familiar?",
       herkenbaarBody:
-        "Working with scattered docs, notes and tools? Admin grows silently. IDEX Praxis brings structure: client info, steps and exercises in one place - so you can focus on the client.",
+        "Do you work with loose documents, notes and tools? Then a lot of time quietly goes to administration. IDEX Praxis brings structure: client information, steps in the trajectory and exercises in one place, so you have more time for the contact.",
       watJeKrijgtTitle: "What you get",
-      watJeKrijgtIntro: "Generic tools are 'one size fits most'. Praxis is 'one size fits your practice'.",
+      watJeKrijgtIntro:
+        "Standard software is 'one size fits most'. Praxis is for 'one size fits your practice'.",
       watJeKrijgtBullets: [
-        "A first usable version of one core workflow (fast value).",
-        "Templates and questionnaires aligned with your method.",
-        "Clean reporting and simple exports.",
-        "Transferable delivery: documentation + source code + handover (no lock-in).",
-        "Extend only when needed, support on demand (no subscription).",
+        "First workable version of a core workflow (quick value).",
+        "Templates, questionnaires and schemas matching your approach.",
+        "Clear reporting and simple exports/reporting.",
+        "Transferable: documentation + source code + handover (no vendor lock-in).",
+        "Expand when needed, aftercare on request (no subscription).",
       ],
-      tooltipTitle: "Open-source components & EU hosting",
+      tooltipTitle: "Open source & EU hosting (what do we mean by this?)",
       tooltipBody:
-        "Built with open-source components and optionally hosted in the EU (e.g., Germany). You receive documentation + source code so you are not tied to one vendor.",
+        "We build with open-source components and can host in Germany (Hetzner). That provides more transparency and less dependency. You also receive documentation + source code, so you are not tied to a supplier.",
       hoeWerktTitle: "How it works",
       hoeWerktSteps: [
-        ["Intro (15 min)", "Goals, pain points, current workflow."],
-        ["Scope sketch", "Pick one core workflow with immediate impact."],
-        ["Fixed-price offer", "Scope, plan, acceptance criteria."],
-        ["Build in milestones", "Test and adjust within scope."],
-        ["Delivery + handover", "Docs + code + handover. Support on demand."],
+        ["Intro (15 min)", "Goals, bottlenecks and current way of working."],
+        ["Scope sketch", "We choose a core workflow with immediate effect."],
+        ["Quote (fixed price)", "Scope, planning, acceptance criteria and fixed price."],
+        ["Build in milestones", "Test and adjust within the scope."],
+        ["Delivery + handover", "Documentation + source code + handover. Aftercare on request."],
       ],
-      prijsTitle: "Typical range (first usable version)",
+      prijsTitle: "Indication (first workable version)",
       prijsBody:
-        "A first version for one core workflow is often ?1,500 - ?5,000 depending on roles, templates and reporting. Prefer certainty first? Praxis Scan (€750) is deducted if you continue.",
+        "A first workable version for a core workflow (e.g. intake + report or appointments + report) is often between €1.500 and €5.000, depending on roles, templates and reporting. Want certainty first? Then there is the Praxis Scan (€750) - which is credited if you continue.",
       securityTitle: "Security & privacy",
       securityBody:
-        "Security and data-processing agreements are part of the scope: role-based access, backups, secure password handling, and clear hosting/sub-processor agreements.",
-      bottomCtaTitle: "Not sure what fits?",
+        "Privacy and information security are part of the scope. At minimum: role-based access, logging, backups, secure password storage and agreements about hosting/subprocessors. If applicable, a data processing agreement is available.",
+      bottomCtaTitle: "Not sure what fits you?",
       bottomCtaBody:
-        "Book a free 15-minute intro. You will quickly know whether a standard tool is enough or a first custom version saves time and frustration.",
+        "Schedule a free 15-minute intro. Then you will quickly know whether standard software is sufficient, or whether a first workable custom version saves time and frustration.",
     },
+
     werkwijze: {
-      title: "Approach & guarantees",
+      title: "Working method & guarantees",
       kicker: "IDEX Praxis",
       intro:
-        "Workflow-first software: secure, clear and transferable. Start small, expand only when it truly helps.",
+        "Software that follows your way of working - safe, clear and transferable. Not as many features as possible, but a clear workflow that brings calm and time savings. You start small and only expand when it is really needed.",
       miniFlow: {
         title: "Milestones",
         steps: ["Intro", "Scope sketch", "Build & test", "Delivery"],
       },
       bullets: [
-        ["Prima il processo", "Your process and templates lead - tech follows."],
-        ["Predictable delivery", "Fixed scope / fixed price with milestones."],
-        ["Privacy & sicurezza", "Designed for sensitive client data (roles/permissions, clear agreements)."],
-        ["Nessun vincolo", "Documentation + source code + handover included."],
-        ["Support on demand", "No subscription; changes quoted upfront."],
+        ["Business-first", "Your process, templates and way of working are central - technology follows."],
+        ["Predictable process", "Fixed scope/fixed price, milestones with acceptance criteria."],
+        ["Privacy & security by design", "Suitable for sensitive client data, with roles/permissions and clear agreements."],
+        ["Transferable, without lock-in", "Documentation, source code and handover moment included as standard."],
+        ["Aftercare without obligation", "Maintenance and development on request, quoted upfront - no subscription."],
       ],
-      continuityTitle: "Continuity",
+      continuityTitle: "Continuity (one specialist, well secured)",
       continuityBody:
-        "One specialist, short lines. Continuity is secured through documentation, reproducible builds and clear hosting/account access agreements.",
+        "You work with one fixed specialist: short lines and speed. Continuity is ensured through transferability: documentation, repository structure, reproducible builds and agreements about hosting/accounts. If needed, temporary extra capacity can be deployed, always in consultation.",
       ctaTitle: "Choose the best first core workflow together.",
-      ctaBody: "Book a 15-minute intro. You will quickly know the smartest first step.",
+      ctaBody: "Schedule an intro (15 min). Then it is quickly clear what the smartest first step is.",
     },
+
     standaard: {
-      title: "Standard tools / low-code vs IDEX Praxis",
+      title: "Standard software / low-code vs IDEX Praxis",
       kicker: "Comparison",
       intro:
-        "Standard tools are fine when your workflow is standard. Praxis is for practices that want one workflow that truly fits.",
-      tableHeadings: ["Category", "Standard / low-code", "IDEX Praxis"],
-      whenStdTitle: "When standard/low-code fits",
-      whenStd: ["Your process is mostly standard.", "Few custom templates/models.", "Workarounds are acceptable."],
-      whenIdexTitle: "When IDEX Praxis fits better",
-      whenIdex: ["Your workflow must lead.", "Your templates/models are central.", "You want fewer tools and one flow.", "You want ownership and transferability."],
-      tableTitle: "Compact comparison",
-      table: [
-        ["Start", "Fast, but often as the tool wants", "Start small with your core workflow"],
-        ["Workflow", "You adapt to the tool", "Tool adapts to you"],
-        ["Templates/models", "Limited / workarounds", "Exactly as you work"],
-        ["Overview", "Often extra tools", "One clear flow"],
-        ["Extending", "Vendor roadmap dependent", "Based on real usage/impact"],
-        ["Ownership", "Lock-in risk", "Transferable (code + docs + handover)"],
+        "Standard practice software and low-code tools are fine if your way of working is largely standard. Praxis is for practices that want a coherent workflow that fits the reality of the work floor.",
+      tableHeadings: ["Part", "Standard / low-code", "IDEX Praxis"],
+      whenStdTitle: "When does standard software or low-code fit?",
+      whenStd: [
+        "Your process largely follows the book.",
+        "You use few custom templates/models.",
+        "You can live with workarounds or extra separate tools.",
       ],
-      ctaTitle: "Not sure what fits?",
+      whenIdexTitle: "When does IDEX Praxis fit better?",
+      whenIdex: [
+        "Your intake, session and reporting workflow must be leading.",
+        "You want questionnaires/schemas/models exactly as you work.",
+        "You want fewer separate tools and a clear flow.",
+        "You want ownership and transferability (no lock-in).",
+      ],
+      tableTitle: "Short comparison",
+      table: [
+        ["Start", "Fast, but often the way the tool wants", "Start small with your core workflow"],
+        ["Workflow", "You adapt your way of working", "Software follows your way of working"],
+        ["Custom templates/models", "Limited / workarounds", "Exactly as you work"],
+        ["Overview", "Often extra tools alongside", "A clear flow"],
+        ["Expanding", "Depends on vendor/roadmap", "Based on usage/impact"],
+        ["Ownership", "Lock-in risk", "Transferable (source code + documentation + handover)"],
+      ],
+      ctaTitle: "Not sure what fits you?",
       ctaBody:
-        "Book a 15-minute intro. You'll quickly know whether standard tools are enough or a first custom version saves time and frustration.",
+        "Schedule an intro (15 min). Then it is quickly clear whether standard software is sufficient, or whether a first workable custom version saves time and frustration.",
     },
+
     aanbod: {
       title: "Offer",
-      intro: "Start small. Or start with certainty via a scan. Everything aims at a first version that feels great in daily work.",
+      intro:
+        "You can start small right away or start with the certainty of a scan first. Everything is aimed at a first version that runs pleasantly in practice.",
       items: [
-        { t: "Intro (15 min)", d: "Free. We check fit and best first workflow.", price: "Free" },
-        { t: "Praxis Scan", d: "A clear plan: best first workflow, scope, risks, plan and fixed price. Deducted if you continue.", price: "€750 (deductible)" },
-        { t: "Praxis MVP (first usable version)", d: "One core workflow with your templates and roles/permissions. Extend later, controlled.", price: "Often ?2,500 - ?6,000" },
+        {
+          t: "Intro (15 min)",
+          d: "Free. We discuss goals, bottlenecks and determine whether standard software is sufficient or whether custom work is smarter.",
+          price: "Free",
+        },
+        {
+          t: "Praxis Scan",
+          d: "A short scan that ends in a clear plan: best first core workflow, scope, risks, planning and fixed price. Credited if you continue building.",
+          price: "?750 (credited)",
+        },
+        {
+          t: "Praxis MVP (first workable version)",
+          d: "A first version around a core workflow (e.g. intake -> session -> report), with your templates and roles/permissions. You can expand later, in a controlled way.",
+          price: "Often €2.500 - €6.000",
+        },
       ],
-      note: "Want the intro button to go to Calendly? Replace the link in the CTA component.",
+      note: "",
     },
+
     cases: {
       title: "Cases",
-      intro: "Real-world workflows: start with one core flow, extend based on impact.",
+      intro:
+        "Practice software that really works in the daily routine. Not an all-in-one package, but a clear core workflow that delivers calm and time savings immediately - and then can be expanded in a controlled way.",
       kicker: "Practice cases",
       labels: {
-        pain: "Pain points",
+        pain: "Problem",
         solution: "Solution",
         result: "Result",
       },
       items: [
-        { t: "Case 1 - From scattered notes to one client flow", s: "Situation: docs, notes and spreadsheets everywhere.", k: ["Info in multiple tools", "Inconsistent reporting", "No fixed flow"], o: "Solution: intake -> session -> report -> overview.", r: ["Less searching", "Faster reporting", "Ready to extend"] },
-        { t: "Case 2 - Your method, without workarounds", s: "Situation: custom method, templates, evaluations.", k: ["Templates do not fit", "Exports + loose docs", "Too much manual reporting"], o: "Solution: templates + workflow + export.", r: ["Less double work", "Clear structure", "Calm"] },
-        { t: "Case 3 - Privacy & access clarity", s: "Need: roles/permissions + clear hosting/access.", k: ["Uncertainty about data location", "Need RBAC"], o: "Solution: RBAC + agreements + transferable handover.", r: ["Trust", "Professional base", "Nessun vincolo"] },
+        {
+          t: "Case 1 - From loose notes to a clear client flow",
+          s: "Situation: loose documents, notes and Excel. Finding overview takes time.",
+          k: [
+            "Information spread across multiple tools",
+            "Reporting and progress not uniform",
+            "No fixed structure from intake -> session -> evaluation",
+            "Working out models takes a lot of time",
+          ],
+          o: "Solution: Praxis MVP around intake -> session -> report -> overview, with custom fields and templates.",
+          r: ["One overview per client trajectory", "Faster reporting through a fixed structure", "Base to expand later"],
+        },
+        {
+          t: "Case 2 - Custom templates and method, without workarounds",
+          s: "Situation: custom method with models, questionnaires and evaluations. Standard software does not quite fit.",
+          k: ["Templates do not fit well into standard fields", "Workarounds with exports/separate docs", "Reporting takes too much manual work"],
+          o: "Solution: templates and questionnaires as the practice works + clear workflow + simple export.",
+          r: ["Less double administration", "Fixed structure per trajectory", "More calm: everything in one flow"],
+        },
+        {
+          t: "Case 3 - Privacy & access: client data safe and clearly arranged",
+          s: "Situation: need for careful GDPR processing, roles/permissions and ownership.",
+          k: ["Uncertainty about data location and access", "Need for roles/permissions (who can see what)"],
+          o: "Solution: RBAC + hosting/access agreements + transferable delivery (source code + documentation).",
+          r: ["Clear agreements (calm and trust)", "Professional basis for sensitive data", "No lock-in"],
+        },
       ],
       ctaTitle: "Ready to start?",
-      ctaBody: "Book a 15-minute intro. We will confirm if standard tools are enough or if a first custom version brings more value.",
+      ctaBody: "Schedule an intro of 15 minutes. Then we determine whether standard software is sufficient or whether a first custom version delivers more.",
     },
+
     faq: {
       title: "FAQ",
       kicker: "FAQ",
-      intro: "Quick answers to the usual questions.",
+      intro: "The questions you probably have first. Is your question not listed? Feel free to email or call.",
       items: [
         {
-          q: "Is my client data secure?",
+          q: "Is my client data safe?",
           short: "Short answer: Yes. Security and privacy are part of the design and delivery.",
           long:
-            "IDEX Praxis is built on a professional stack (Java Spring Boot + Spring Security) and configured to handle client data safely. Standard safeguards include role-based access (RBAC), secure authentication (hashed passwords), encrypted connections (HTTPS/TLS), protected data storage, logging where appropriate, and backup/recovery agreements. GDPR aspects such as data minimization, transparency about hosting/access/retention, and a processing agreement (when needed) are agreed in advance. No system is 100% risk-free; therefore we combine technical measures with work practices (account management, strong passwords). Extra measures such as 2FA or stricter logging can be agreed if needed.",
+            "Applications from IDEX Praxis are built on a professional foundation (Java Spring Boot + Spring Security) and set up to process client data safely and carefully. By default we ensure, among other things: roles & permissions (RBAC), secure authentication (passwords hashed), encrypted connections (HTTPS/TLS), protected data storage, logging (where appropriate) and backup/recovery agreements. GDPR aspects such as data minimization, transparency about hosting/access/retention periods and a data processing agreement (when needed) are defined in advance. No system is 100% risk-free; therefore we combine technology with working agreements (account management, strong passwords). If desired, additional measures such as 2FA or stricter logging can be agreed.",
         },
         {
-          q: "Where is my data hosted?",
-          short: "Short answer: We agree this upfront. Hosting can be in the EU, for example Germany (Hetzner).",
+          q: "Where is my data stored?",
+          short: "Short answer: We clearly agree this in advance. Hosting can be in the EU, for example in Germany (Hetzner).",
           long:
-            "Depending on your preference, hosting can be set up in an EU region - for example Germany (Hetzner) - with a protected database and clear management agreements. We also build with open-source components and deliver a transferable result (documentation + source code), so you are not tied to a platform or vendor.",
+            "Depending on your preference, hosting can be set up in an EU region - for example Germany (Hetzner) - with a protected database and clear management agreements. We also build with open-source components and deliver in a transferable way (documentation + source code), so you are not tied to a platform or supplier.",
           note:
-            "Open-source & EU hosting (what do we mean?) Transparently built and (optionally) hosted in Germany (Hetzner). Includes documentation and source code, so you are not tied to a vendor.",
+            "Open source & EU hosting (what do we mean by that?) Transparently built and (optionally) hosted in Germany (Hetzner). Includes documentation and source code, so you are not tied to a supplier.",
         },
         {
-          q: "Can this fit my current workflow?",
-          short: "Short answer: Yes. Praxis is designed to follow your workflow, not the other way around.",
+          q: "Can this connect to my current way of working?",
+          short: "Short answer: Yes. Praxis is intended to follow your way of working, not the other way around.",
           long:
-            "Many practices use their own method, templates, and reporting style. We therefore start small: together we choose one core workflow (e.g., intake -> session -> report) that immediately brings calm and time savings. We build templates, fields and steps exactly as you use them (questionnaires, models, charts/overviews) and you test along the way. The result is software that feels right in practice - and later you can expand based on use.",
+            "Many practices work with their own method, templates and reporting style. That is why we start small: we choose a core workflow together (e.g. intake -> session -> report) that immediately brings calm and time savings. We build templates, fields and steps as you use them (questionnaires, models, charts/overviews) and you test along the way. This creates software that works well in practice - and later you can expand based on usage.",
         },
         {
-          q: "What does it cost and how fast can it go live?",
-          short: "Short answer: You get clarity upfront. A first usable version is often between €2.500 and €6.000.",
+          q: "What does it cost and how quickly can it go live?",
+          short: "Short answer: You get clarity in advance. A first workable version is often between €2.500 and €6.000.",
           long:
-            "The investment depends on scope, roles, templates and reporting. A first usable version for one core workflow often falls between €2.500 and €6.000. Lead time is usually a few weeks, depending on scope and feedback moments. Want to start small with low risk? You can begin with the Praxis Scan (€750) (deducted if you continue).",
+            "The investment depends on scope, roles, templates and reporting. A first workable version for a core workflow is often between €2.500 and €6.000. Lead time is usually a few weeks, depending on scope and feedback moments. Want to start small with low risk? Then you can start with the Praxis Scan (€750) (credited if you continue building).",
         },
         {
           q: "What if I want to expand later?",
-          short: "Short answer: We expand step by step based on impact and usage.",
+          short: "Short answer: Then we build step by step based on impact and usage.",
           long:
-            "Praxis is designed to grow in a controlled way: first one core workflow done right, then extend with extra steps, templates, reports or (where useful) integrations. New requests go through change requests: priced and planned separately, so scope, planning and costs stay predictable.",
+            "Praxis is designed to grow in a controlled way: first get a core workflow right, then expand with extra steps, templates, reports or (where sensible) integrations. New wishes go through change requests: we price and plan them separately, so scope, planning and costs remain predictable.",
         },
         {
-          q: "Am I locked in?",
+          q: "Am I locked in to you?",
           short: "Short answer: No. You receive a transferable delivery and are not tied to a platform.",
           long:
-            "No vendor lock-in: documentation, source code and a handover moment are standard parts of delivery. Support and further development are on demand (no mandatory subscription). This keeps ownership and choice with you.",
+            "No vendor lock-in: documentation, source code and a handover moment are standard parts of delivery. Aftercare and further development are on demand (no mandatory subscription). This way you keep ownership and freedom of choice.",
         },
         {
           q: "Why not just standard software?",
           short: "Short answer: Standard software is fine if your workflow is standard. Praxis is for custom work that follows your method.",
           long:
-            "Standard software is often cheaper to start, but can create hidden costs: adapting your workflow, workarounds, extra tools, or limited reporting. Praxis is for practices that want one coherent workflow. Standard/low-code often fits when your process is mostly standard, you use few custom models/templates, and workarounds are acceptable. Praxis fits better when your method leads, your templates/models are central, you want stepwise expansion, and ownership/transferability matters.",
+            "Standard software is often cheaper to start, but it can create hidden costs: adapting your way of working, workarounds, extra tools alongside or limited reporting. Praxis is for practices that prefer a coherent workflow. Standard/low-code often fits if: your process is largely standard, you use few custom models/templates and you can live with workarounds. Praxis fits better if: your method is leading, your templates/models are central, you want to expand in steps and ownership/transferability matters.",
         },
         {
           q: "Is low-code not the future?",
-          short: "Short answer: Low-code is valuable, but not always the best fit for sensitive data and a specific workflow.",
+          short: "Short answer: Low-code is valuable, but not always the best fit with sensitive data and a specific way of working.",
           long:
-            "Low-code is mainstream and can be a great choice in many cases. Praxis is not anti low-code; it is meant for situations where you need more freedom, better fit, security/privacy and less lock-in - especially with client data and workflows that must be precise.",
+            "Low-code is mainstream and can be a great choice in many situations. Praxis is not anti low-code; it is intended for situations where you need more freedom, a better fit, security/privacy and less lock-in - especially with client data and workflows that must be precise.",
         },
         {
-          q: "What if the developer becomes unavailable?",
-          short: "Short answer: Continuity is safeguarded through transferability and clear agreements.",
+          q: "What if the developer drops out?",
+          short: "Short answer: Continuity is safeguarded with transferability and clear agreements.",
           long:
-            "You work with one dedicated specialist: short lines and speed. At the same time, continuity matters. Therefore IDEX safeguards transferability with: 1) documentation and a clear repository structure 2) a handover moment at delivery 3) reproducible builds and test/acceptance agreements 4) agreements on hosting and account access. If needed, temporary capacity can be added from a small network of trusted freelancers/partners (with your approval).",
+            "You work with one fixed specialist: short lines and speed. At the same time, continuity is important. That is why IDEX safeguards transferability with: 1) documentation and a clear repository structure 2) handover moment at delivery 3) reproducible builds and test/acceptance agreements 4) agreements about access to hosting and accounts. If needed, temporary extra capacity can be deployed from a small network of fixed freelancers/partners (only with approval).",
         },
         {
           q: "Pause or cancel?",
@@ -602,12 +667,13 @@ export const copy = {
         },
       ],
       ctaTitle: "Still have a question?",
-      ctaBody: "Feel free to send a message. I will help you choose the best next step.",
+      ctaBody: "Feel free to message me. I will think it through with you and quickly tell you the best first step.",
     },
+
     contact: {
       title: "Contact",
       kicker: "Contact",
-      intro: "Book an intro or send a message.",
+      intro: "Schedule an intro or send your question. I respond quickly (usually within 1 business day).",
       company: "IDEX Praxis",
       address: ["Jonagoldstraat 65", "6515 EN Nijmegen", "Netherlands"],
       phoneLabel: "+31 (0)24 207 0032",
@@ -638,8 +704,8 @@ export const copy = {
 
   it: {
     meta: {
-      title: "IDEX Praxis - Software che segue il tuo metodo di lavoro",
-      desc: "Un luogo sicuro per intake, sessioni e progresso - senza adattare il tuo metodo a un software standard.",
+      title: "IDEX Praxis - Software per lo studio che segue il tuo modo di lavorare",
+      desc: "Un luogo sicuro per intake, percorsi e progressi - senza dover adattare il tuo metodo a un software standard.",
     },
     common: {
       brandName: "IDEX Praxis",
@@ -648,32 +714,46 @@ export const copy = {
       menuLabel: "Menu",
       languageSwitcherLabel: "Lingua",
     },
-    nav: { home: "Home", werkwijze: "Metodo", vergelijking: "Confronto", aanbod: "Offerta", contact: "Contatti", cases: "Casi", faq: "FAQ" },
-    cta: { kennismaking: "Chiamata di 15 min", scan: "Praxis Scan (€750)", aanbod: "Vedi l'offerta", cases: "Vedi i casi", faq: "Leggi FAQ" },
+    nav: {
+      home: "Home",
+      werkwijze: "Metodo",
+      vergelijking: "Confronto",
+      aanbod: "Offerta",
+      contact: "Contatto",
+      cases: "Casi",
+      faq: "FAQ",
+    },
+    cta: {
+      kennismaking: "Pianifica una conoscenza (15 min)",
+      scan: "Praxis Scan (€750)",
+      aanbod: "Vedi l'offerta",
+      cases: "Vedi i casi",
+      faq: "Leggi le FAQ",
+    },
     ctaPanel: {
       kicker: "Prossimo passo",
       badgeTitle: "Praxis",
       badgeSubtitle: "Prima versione",
       stats: [
-        { n: "15", l: "min di chiamata" },
-        { n: "1", l: "flusso chiave" },
-        { n: "0", l: "nessun vincolo" },
+        { n: "15", l: "min intake" },
+        { n: "1", l: "workflow chiave" },
+        { n: "0", l: "lock-in" },
       ],
     },
     footer: {
-      blurb: "Praxis crea software per la pratica che segue il tuo flusso - sicuro, chiaro e trasferibile.",
+      blurb: "Praxis costruisce software per lo studio che segue il tuo modo di lavorare - sicuro, chiaro e trasferibile.",
       pagesLabel: "Pagine",
-      contactLabel: "Contatti",
+      contactLabel: "Contatto",
     },
     home: {
-      heroKicker: "Software su misura",
-      heroTitle: "Software per la pratica che segue il tuo flusso.",
+      heroKicker: "Software su misura per lo studio",
+      heroTitle: "Software intelligente che segue il tuo modo di lavorare.",
       heroSub:
-        "Un unico posto sicuro per intake, sessioni e progresso - senza forzare il tuo metodo dentro un pacchetto standard.",
+        "Un luogo sicuro per intake, percorsi e progressi - senza dover adattare il tuo metodo a un pacchetto standard.",
       heroForWho: "Per fisioterapia, psicologia, coaching e piccoli studi.",
-      scanHint: "Praxis Scan: piano + percorso in 1-2 settimane (scalabile).",
-      heroOrbTitle: "Flusso - Calma - Risparmio di tempo",
-      heroOrbBody: "Niente rumore, nessun vincolo - un flusso chiaro che funziona.",
+      scanHint: "Praxis Scan: piano + roadmap in 1-2 settimane (scalabile).",
+      heroOrbTitle: "Workflow - Calma - Risparmio di tempo",
+      heroOrbBody: "Niente rumore, niente lock-in - un core flow chiaro che funziona.",
       heroOrbExample: "Intake -> piano -> sessioni -> resoconto -> export",
       heroOrbUi: {
         header: "Intake - Primo appuntamento",
@@ -681,199 +761,256 @@ export const copy = {
         clientLabel: "Cliente",
         clientValue: "Nuovo cliente",
         goalLabel: "Obiettivo",
-        goalValue: "Calma e chiarezza nel percorso",
+        goalValue: "Calma e panoramica nel percorso",
         statusLabel: "Stato",
-        statusValue: "In corso",
+        statusValue: "In trattamento",
         steps: ["Intake", "Piano", "Sessione", "Resoconto"],
       },
       promises: [
-        { t: "Chiarezza & calma", d: "Tutto rintracciabile, con ruoli e permessi." },
-        { t: "Privacy fin dall'inizio", d: "Accordi chiari su archiviazione, accesso e conservazione." },
-        { t: "Flusso su misura", d: "Intake -> obiettivi -> sessioni -> esercizi -> valutazione." },
+        { t: "Panoramica e calma", d: "Tutto rintracciabile, con ruoli e permessi." },
+        { t: "Privacy-by-design", d: "Accordi chiari su archiviazione, accesso e tempi di conservazione." },
+        { t: "Workflow su misura", d: "Intake -> obiettivi -> sessioni -> esercizi -> valutazione. Può anche essere diverso." },
       ],
       stats: [
-        { n: "1", l: "flusso base" },
+        { n: "1", l: "prima il workflow chiave" },
         { n: "UE", l: "hosting possibile" },
-        { n: "0", l: "nessun vincolo" },
-        { n: "100%", l: "consegna trasferibile" },
+        { n: "0", l: "lock-in" },
+        { n: "100%", l: "trasferibile" },
       ],
       herkenbaarTitle: "Ti suona familiare?",
       herkenbaarBody:
-        "Documenti e note sparsi aumentano l'amministrazione. IDEX Praxis porta struttura: dati cliente, passi del percorso ed esercizi in un unico flusso.",
+        "Lavori con documenti, note e strumenti separati? Allora, senza accorgertene, molto tempo va all'amministrazione. IDEX Praxis porta struttura: informazioni cliente, passi del percorso ed esercizi in un unico posto, così hai più attenzione per il contatto.",
       watJeKrijgtTitle: "Cosa ottieni",
-      watJeKrijgtIntro: "I tool standard sono 'taglia unica'. Praxis e su misura per la tua pratica.",
+      watJeKrijgtIntro:
+        "Il software standard è 'one size fits most'. Praxis è per 'one size fits il tuo studio'.",
       watJeKrijgtBullets: [
-        "Prima versione utilizzabile di un flusso chiave.",
-        "Template e questionari secondo il tuo metodo.",
-        "Resoconti puliti ed export semplici.",
-        "Consegna trasferibile: documentazione + codice sorgente + passaggio.",
-        "Estensione solo quando serve, supporto su richiesta.",
+        "Prima versione funzionante di un workflow chiave (valore rapido).",
+        "Template, questionari e schemi in linea con il tuo approccio.",
+        "Reportistica ordinata ed export/report semplici.",
+        "Trasferibile: documentazione + codice sorgente + passaggio (nessun vendor lock-in).",
+        "Estendere quando serve, supporto su richiesta (nessun abbonamento).",
       ],
-      tooltipTitle: "Componenti open-source & hosting UE",
+      tooltipTitle: "Open source & hosting UE (cosa intendiamo?)",
       tooltipBody:
-        "Costruito con componenti open-source e (opzionale) hosting in UE. Ricevi documentazione + codice sorgente.",
+        "Costruiamo con componenti open source e possiamo ospitare in Germania (Hetzner). Questo dà più trasparenza e meno dipendenza. Inoltre ricevi documentazione + codice sorgente, così non sei legato a un fornitore.",
       hoeWerktTitle: "Come funziona",
       hoeWerktSteps: [
-        ["Chiamata (15 min)", "Obiettivi, problemi, flusso attuale."],
-        ["Ambito", "Scegliamo un flusso con impatto immediato."],
-        ["Offerta a prezzo fisso", "Ambito, piano, criteri di accettazione."],
-        ["Sviluppo a milestone", "Test e aggiustamenti dentro l'ambito."],
-        ["Consegna + passaggio", "Documentazione + codice + passaggio. Supporto su richiesta."],
+        ["Conoscenza (15 min)", "Obiettivi, colli di bottiglia e modo di lavorare attuale."],
+        ["Bozza di scope", "Scegliamo un workflow chiave con effetto immediato."],
+        ["Offerta (prezzo fisso)", "Scope, pianificazione, criteri di accettazione e prezzo fisso."],
+        ["Sviluppo per milestone", "Test e aggiustamenti entro lo scope."],
+        ["Consegna + passaggio", "Documentazione + codice sorgente + passaggio. Supporto su richiesta."],
       ],
-      prijsTitle: "Range tipico (prima versione)",
+      prijsTitle: "Indicazione (prima versione funzionante)",
       prijsBody:
-        "Spesso €1.500 - €5.000 per un flusso chiave (in base a ruoli, template e report). Praxis Scan (€750) viene scalato se prosegui.",
-      securityTitle: "Sicurezza & privacy",
+        "Una prima versione funzionante per un workflow chiave (ad es. intake + resoconto o appuntamenti + resoconto) è spesso tra €1.500 e €5.000, in base a ruoli, template e reportistica. Vuoi certezza prima? Allora c'è la Praxis Scan (€750) - che viene scalata se prosegui.",
+      securityTitle: "Sicurezza e privacy",
       securityBody:
-        "Sicurezza e accordi di trattamento dati fanno parte dell'ambito: accesso a ruoli, backup e accordi chiari.",
-      bottomCtaTitle: "Non sei sicuro?",
+        "Privacy e sicurezza delle informazioni fanno parte dello scope. Minimo: accesso basato sui ruoli, logging, backup, gestione sicura delle password e accordi su hosting/sub-responsabili. Se applicabile, è disponibile un accordo di trattamento dati.",
+      bottomCtaTitle: "Non sei sicuro di cosa faccia per te?",
       bottomCtaBody:
-        "Prenota una chiamata gratuita di 15 minuti. Capirai subito se basta un tool standard o se una prima versione su misura ti fa risparmiare tempo.",
+        "Pianifica una conoscenza gratuita di 15 minuti. Poi saprai rapidamente se basta un software standard o se una prima versione su misura ti fa risparmiare tempo e frustrazione.",
     },
+
     werkwijze: {
-      title: "Metodo & garanzie",
+      title: "Metodo di lavoro e garanzie",
       kicker: "IDEX Praxis",
-      intro: "Software guidato dal flusso: sicuro, chiaro e trasferibile. Parti piccolo, espandi solo quando serve.",
+      intro:
+        "Software che segue il tuo modo di lavorare - sicuro, chiaro e trasferibile. Non il maggior numero possibile di funzioni, ma un workflow chiaro che porta calma e risparmio di tempo. Parti in piccolo ed espandi solo quando serve davvero.",
       miniFlow: {
         title: "Milestone",
-        steps: ["Chiamata iniziale", "Ambito", "Sviluppo & test", "Consegna"],
+        steps: ["Conoscenza", "Bozza di scope", "Sviluppo e test", "Consegna"],
       },
       bullets: [
-        ["Prima il processo", "Il tuo processo guida - la tecnica segue."],
-        ["Consegna prevedibile", "Ambito fisso / prezzo fisso a milestone."],
-        ["Privacy & sicurezza", "Pensato per dati sensibili (ruoli/permessi, accordi chiari)."],
-        ["Nessun vincolo", "Documentazione + codice sorgente + passaggio inclusi."],
-        ["Supporto su richiesta", "Nessun abbonamento obbligatorio."],
+        ["Prima l'organizzazione", "Il tuo processo, i template e il modo di lavorare sono centrali - la tecnologia segue."],
+        ["Percorso prevedibile", "Scope fisso/prezzo fisso, milestone con criteri di accettazione."],
+        ["Privacy e sicurezza by design", "Adatto a dati cliente sensibili, con ruoli/permessi e accordi chiari."],
+        ["Trasferibile, senza lock-in", "Documentazione, codice sorgente e momento di passaggio inclusi di default."],
+        ["Supporto senza obblighi", "Manutenzione ed evoluzioni su richiesta, preventivate prima - nessun abbonamento."],
       ],
-      continuityTitle: "Continuita",
-      continuityBody: "Linee dirette con uno specialista; continuita garantita via documentazione e build riproducibili.",
-      ctaTitle: "Scegliamo insieme il primo flusso chiave.",
-      ctaBody: "Prenota una chiamata di 15 minuti. Capirai rapidamente qual e il primo passo migliore.",
+      continuityTitle: "Continuità (uno specialista, ben garantita)",
+      continuityBody:
+        "Lavori con uno specialista dedicato: comunicazione diretta e velocità. La continuità è garantita tramite trasferibilità: documentazione, struttura del repository, build riproducibili e accordi su hosting/account. Se necessario, può essere coinvolta temporaneamente capacità aggiuntiva, sempre previo accordo.",
+      ctaTitle: "Scegliamo insieme il miglior primo workflow chiave.",
+      ctaBody: "Pianifica una conoscenza (15 min). Poi è subito chiaro qual è il primo passo più intelligente.",
     },
+
     standaard: {
-      title: "Standard/low-code vs IDEX Praxis",
+      title: "Software standard / low-code vs IDEX Praxis",
       kicker: "Confronto",
-      intro: "Gli strumenti standard vanno bene se il tuo flusso e standard. Praxis e per chi vuole un flusso che calzi davvero.",
+      intro:
+        "Software standard per lo studio e strumenti low-code vanno bene se il tuo modo di lavorare è in gran parte standard. Praxis è per gli studi che vogliono un workflow che combaci davvero e si adatti alla realtà del lavoro quotidiano.",
       tableHeadings: ["Voce", "Standard / low-code", "IDEX Praxis"],
-      whenStdTitle: "Quando lo standard va bene",
-      whenStd: ["Processo standard.", "Pochi template personalizzati.", "Workaround accettabili."],
-      whenIdexTitle: "Quando Praxis e meglio",
-      whenIdex: ["Il flusso deve guidare.", "Template/modelli sono centrali.", "Meno tool, un flusso.", "Proprieta e trasferibilita."],
+      whenStdTitle: "Quando va bene software standard o low-code?",
+      whenStd: [
+        "Il tuo processo segue in gran parte lo schema standard.",
+        "Usi pochi template/modelli personali.",
+        "Puoi convivere con workaround o strumenti separati extra.",
+      ],
+      whenIdexTitle: "Quando IDEX Praxis è più adatto?",
+      whenIdex: [
+        "Il tuo workflow di intake, sessione e resoconto deve essere centrale.",
+        "Vuoi questionari/schemi/modelli esattamente come lavori tu.",
+        "Vuoi meno strumenti separati e un flusso chiaro.",
+        "Vuoi ownership e trasferibilità (niente lock-in).",
+      ],
       tableTitle: "Confronto rapido",
       table: [
-        ["Start", "Veloce ma decide il tool", "Parti con il flusso chiave"],
-        ["Flusso", "Ti adatti al tool", "Il tool si adatta a te"],
-        ["Template", "Limitato", "Come lavori tu"],
-        ["Panoramica", "Altri tool", "Un flusso chiaro"],
-        ["Estensioni", "Dipende dal fornitore", "Basato su uso/impatti"],
-        ["Proprieta", "Rischio vincoli", "Trasferibile (codice+doc+passaggio)"],
+        ["Start", "Veloce, ma spesso come vuole lo strumento", "Parti in piccolo con il tuo workflow chiave"],
+        ["Workflow", "Ti adatti allo strumento", "Il software segue il tuo modo di lavorare"],
+        ["Template/modelli personali", "Limitato / workaround", "Esattamente come lavori tu"],
+        ["Panoramica", "Spesso strumenti extra a lato", "Un flusso chiaro"],
+        ["Estensioni", "Dipende dal fornitore/roadmap", "In base a uso/impatto"],
+        ["Ownership", "Rischio lock-in", "Trasferibile (codice sorgente + documentazione + passaggio)"],
       ],
-      ctaTitle: "Non sei sicuro di cosa scegliere?",
+      ctaTitle: "Non sei sicuro di cosa faccia per te?",
       ctaBody:
-        "Prenota una chiamata di 15 minuti. Capirai rapidamente se basta un tool standard o se conviene una prima versione su misura.",
+        "Pianifica una conoscenza (15 min). Poi è subito chiaro se basta lo standard o se una prima versione su misura ti fa risparmiare tempo e frustrazione.",
     },
+
     aanbod: {
       title: "Offerta",
-      intro: "Parti piccolo. Oppure parti con certezza con una scan. Obiettivo: una prima versione che funzioni davvero nel quotidiano.",
+      intro:
+        "Puoi partire subito in piccolo o iniziare con la certezza di una scan prima. Tutto è orientato a una prima versione che funzioni bene nella pratica quotidiana.",
       items: [
-        { t: "Chiamata (15 min)", d: "Gratis. Valutiamo fit e primo flusso.", price: "Gratis" },
-        { t: "Praxis Scan", d: "Piano chiaro: flusso, ambito, rischi, piano e prezzo fisso. Scalato se prosegui.", price: "€750 (scalabile)" },
-        { t: "Prima versione Praxis", d: "Un flusso chiave con template e ruoli/permessi. Estensione controllata.", price: "Spesso €2.500 - €6.000" },
+        {
+          t: "Conoscenza (15 min)",
+          d: "Gratis. Parliamo di obiettivi, colli di bottiglia e definiamo se basta lo standard o se il su misura è più intelligente.",
+          price: "Gratis",
+        },
+        {
+          t: "Praxis Scan",
+          d: "Una scan breve che finisce con un piano chiaro: miglior primo workflow chiave, scope, rischi, pianificazione e prezzo fisso. Scalata se prosegui con lo sviluppo.",
+          price: "?750 (scalabile)",
+        },
+        {
+          t: "Praxis MVP (prima versione funzionante)",
+          d: "Una prima versione attorno a un workflow chiave (ad es. intake -> sessione -> resoconto), con i tuoi template e ruoli/permessi. Estensioni possibili più avanti, in modo controllato.",
+          price: "Spesso €2.500 - €6.000",
+        },
       ],
-      note: "Vuoi collegare il bottone a Calendly? Sostituisci il link nella CTA.",
+      note: "",
     },
+
     cases: {
       title: "Casi",
-      intro: "Flussi reali: un flusso chiave, poi estensioni basate sull'impatto.",
-      kicker: "Casi pratici",
+      intro:
+        "Software che funziona davvero nella routine quotidiana. Non un pacchetto tutto-in-uno, ma un workflow chiaro che porta subito calma e risparmio di tempo - e poi può crescere in modo controllato.",
+      kicker: "Casi di studio",
       labels: {
         pain: "Problema",
         solution: "Soluzione",
         result: "Risultato",
       },
       items: [
-        { t: "Caso 1 - Da note sparse a un flusso cliente", s: "Documenti e fogli ovunque.", k: ["Info in piu tool", "Resoconti incoerenti"], o: "Intake -> sessione -> resoconto -> panoramica.", r: ["Meno ricerca", "Resoconti piu veloci"] },
-        { t: "Caso 2 - Metodo tuo, senza workaround", s: "Template e valutazioni su misura.", k: ["Template non entrano", "Troppo manuale"], o: "Template + flusso + export.", r: ["Meno doppio lavoro", "Piu calma"] },
-        { t: "Caso 3 - Privacy & accessi", s: "Ruoli/permessi e hosting chiaro.", k: ["Dubbio su data location", "Serve RBAC"], o: "RBAC + accordi + passaggio trasferibile.", r: ["Fiducia", "Nessun vincolo"] },
+        {
+          t: "Caso 1 - Da note sparse a un flusso cliente chiaro",
+          s: "Situazione: documenti separati, note ed Excel. Ritrovare l'overview richiede tempo.",
+          k: [
+            "Informazioni distribuite su più strumenti",
+            "Resoconti e progressi non uniformi",
+            "Nessuna struttura fissa da intake -> sessione -> valutazione",
+            "Sviluppare i modelli richiede molto tempo",
+          ],
+          o: "Soluzione: Praxis MVP attorno a intake -> sessione -> resoconto -> panoramica, con campi e template personalizzati.",
+          r: ["Una panoramica per percorso cliente", "Resoconti più rapidi grazie a una struttura fissa", "Base per espandere in futuro"],
+        },
+        {
+          t: "Caso 2 - Template e metodologia propri, senza workaround",
+          s: "Situazione: metodologia propria con modelli, questionari e valutazioni. Lo standard non calza del tutto.",
+          k: ["I template non si adattano bene ai campi standard", "Workaround con export/documenti separati", "La reportistica richiede troppo lavoro manuale"],
+          o: "Soluzione: template e questionari come lavora lo studio + workflow chiaro + export semplice.",
+          r: ["Meno doppia amministrazione", "Struttura fissa per percorso", "Più calma: tutto in un flusso"],
+        },
+        {
+          t: "Caso 3 - Privacy e accesso: dati cliente sicuri e ben organizzati",
+          s: "Situazione: bisogno di gestione GDPR accurata, ruoli/permessi e ownership.",
+          k: ["Incertezza su posizione dei dati e accessi", "Bisogno di ruoli/permessi (chi vede cosa)"],
+          o: "Soluzione: RBAC + accordi su hosting/accessi + consegna trasferibile (codice sorgente + documentazione).",
+          r: ["Accordi chiari (calma e fiducia)", "Base professionale per dati sensibili", "Nessun lock-in"],
+        },
       ],
       ctaTitle: "Pronto a partire?",
-      ctaBody: "Prenota una call di 15 minuti. Verifichiamo se basta uno strumento standard o se conviene una prima versione su misura.",
+      ctaBody:
+        "Pianifica una conoscenza di 15 minuti. Poi definiamo se basta lo standard o se una prima versione su misura offre di più.",
     },
+
     faq: {
       title: "FAQ",
       kicker: "FAQ",
-      intro: "Risposte rapide.",
+      intro: "Le domande che probabilmente hai per prime. La tua non c'è? Scrivi o chiama pure.",
       items: [
         {
           q: "I dati dei clienti sono sicuri?",
-          short: "Risposta breve: Si. Sicurezza e privacy fanno parte di design e consegna.",
+          short: "Risposta breve: Sì. Sicurezza e privacy fanno parte di progettazione e consegna.",
           long:
-            "IDEX Praxis e costruito su una base professionale (Java Spring Boot + Spring Security) ed e configurato per gestire i dati in modo sicuro. Le misure standard includono ruoli e permessi (RBAC), autenticazione sicura (password hashate), connessioni cifrate (HTTPS/TLS), archiviazione protetta, logging quando opportuno e accordi di backup/ripristino. Gli aspetti GDPR come minimizzazione dei dati, trasparenza su hosting/accesso/conservazione e un accordo di trattamento (quando necessario) sono definiti in anticipo. Nessun sistema e privo di rischi al 100%; per questo uniamo misure tecniche e buone pratiche operative. Se necessario, possiamo concordare 2FA o logging piu rigoroso.",
+            "Le applicazioni di IDEX Praxis sono costruite su una base professionale (Java Spring Boot + Spring Security) e configurate per gestire i dati cliente in modo sicuro e accurato. Di default garantiamo, tra l'altro: ruoli e permessi (RBAC), autenticazione sicura (password hashate), connessioni cifrate (HTTPS/TLS), archiviazione protetta, logging (dove appropriato) e accordi di backup/ripristino. Aspetti GDPR come minimizzazione dei dati, trasparenza su hosting/accesso/tempi di conservazione e un accordo di trattamento (quando necessario) vengono definiti prima. Nessun sistema è privo di rischi al 100%; per questo uniamo misure tecniche e accordi operativi (gestione account, password robuste). Se desiderato, si possono concordare misure extra come 2FA o logging più rigoroso.",
         },
         {
-          q: "Dove sono ospitati i dati?",
-          short: "Risposta breve: Lo definiamo in anticipo. Hosting UE possibile, ad esempio in Germania (Hetzner).",
+          q: "Dove sono i miei dati?",
+          short: "Risposta breve: Lo definiamo chiaramente in anticipo. Hosting UE possibile, ad esempio in Germania (Hetzner).",
           long:
-            "In base alle preferenze, l'hosting puo essere configurato in una regione UE - ad esempio Germania (Hetzner) - con database protetto e accordi di gestione chiari. Inoltre usiamo componenti open-source e consegniamo un risultato trasferibile (documentazione + codice sorgente), cosi non sei legato a un fornitore.",
+            "In base alle tue preferenze, l'hosting può essere configurato in una regione UE - ad esempio Germania (Hetzner) - con database protetto e accordi di gestione chiari. Inoltre costruiamo con componenti open source e consegniamo in modo trasferibile (documentazione + codice sorgente), così non sei legato a una piattaforma o a un fornitore.",
           note:
-            "Open source & hosting UE (cosa intendiamo?) Costruito in modo trasparente e (opzionalmente) ospitato in Germania (Hetzner). Include documentazione e codice sorgente, cosi non sei legato a un fornitore.",
+            "Open source & hosting UE (cosa intendiamo?) Costruito in modo trasparente e (opzionalmente) ospitato in Germania (Hetzner). Include documentazione e codice sorgente, così non sei legato a un fornitore.",
         },
         {
-          q: "Si adatta al mio flusso?",
-          short: "Risposta breve: Si. Praxis segue il tuo flusso, non il contrario.",
+          q: "Può collegarsi al mio modo di lavorare attuale?",
+          short: "Risposta breve: Sì. Praxis è pensato per seguire il tuo modo di lavorare, non il contrario.",
           long:
-            "Molti studi usano una propria metodologia, template e reportistica. Per questo partiamo piccoli: scegliamo insieme un flusso chiave (ad es. intake -> sessione -> resoconto) che porta subito calma e risparmio di tempo. Costruiamo template, campi e passaggi come li usi tu (questionari, modelli, grafici/panoramiche) e testi lungo il percorso. Il risultato e un software che funziona davvero nella pratica - e potrai estenderlo in seguito in base all'uso.",
+            "Molti studi lavorano con una propria metodologia, template e stile di reportistica. Per questo partiamo in piccolo: scegliamo insieme un workflow chiave (ad es. intake -> sessione -> resoconto) che porta subito calma e risparmio di tempo. Costruiamo template, campi e passi come li usi tu (questionari, modelli, grafici/panoramiche) e testi lungo il percorso. Così nasce un software che funziona bene nella pratica - e poi potrai espandere in base all'uso.",
         },
         {
-          q: "Costi e tempi?",
-          short: "Risposta breve: Chiarezza subito. Una prima versione utile e spesso tra €2.500 e €6.000.",
+          q: "Quanto costa e quanto velocemente può andare live?",
+          short: "Risposta breve: Hai chiarezza subito. Una prima versione funzionante è spesso tra €2.500 e €6.000.",
           long:
-            "L'investimento dipende da ambito, ruoli, template e reportistica. Una prima versione utile per un flusso chiave e spesso tra €2.500 e €6.000. I tempi sono di solito alcune settimane, in base a ambito e feedback. Vuoi partire a basso rischio? Puoi iniziare con la Praxis Scan (€750) (scalabile se prosegui).",
+            "L'investimento dipende da scope, ruoli, template e reportistica. Una prima versione funzionante per un workflow chiave è spesso tra €2.500 e €6.000. I tempi sono di solito alcune settimane, in base a scope e momenti di feedback. Vuoi partire con basso rischio? Allora puoi iniziare con la Praxis Scan (€750) (scalata se prosegui).",
         },
         {
-          q: "E se volessi espandere in futuro?",
-          short: "Risposta breve: Espandiamo passo dopo passo in base a impatto e uso.",
+          q: "E se in futuro volessi espandere?",
+          short: "Risposta breve: Espandiamo passo dopo passo in base a impatto e utilizzo.",
           long:
-            "Praxis e progettato per crescere in modo controllato: prima un flusso chiave fatto bene, poi estensioni con passaggi, template, report o (quando utile) integrazioni. Le nuove richieste passano da change request: stimate e pianificate a parte, cosi ambito, tempi e costi restano prevedibili.",
+            "Praxis è progettato per crescere in modo controllato: prima un workflow chiave fatto bene, poi estensioni con passi aggiuntivi, template, report o (dove ha senso) integrazioni. Le nuove richieste passano tramite change request: le stimiamo e pianifichiamo a parte, così scope, tempi e costi restano prevedibili.",
         },
         {
-          q: "Ci sono vincoli?",
+          q: "Sono vincolato a voi?",
           short: "Risposta breve: No. Ricevi una consegna trasferibile e non sei legato a una piattaforma.",
           long:
-            "Nessun vincolo con il fornitore: documentazione, codice sorgente e un passaggio sono standard. Supporto e sviluppo successivo sono su richiesta (nessun abbonamento obbligatorio). Mantieni proprieta e liberta di scelta.",
+            "Nessun vendor lock-in: documentazione, codice sorgente e un momento di passaggio sono parte standard della consegna. Supporto e sviluppo successivo sono su richiesta (nessun abbonamento obbligatorio). Così mantieni ownership e libertà di scelta.",
         },
         {
-          q: "Perche non usare software standard?",
-          short: "Risposta breve: Va bene se il flusso e standard. Praxis serve quando la metodologia e centrale.",
+          q: "Perché non usare semplicemente software standard?",
+          short: "Risposta breve: Lo standard va bene se il tuo workflow è standard. Praxis è per il su misura che segue la tua metodologia.",
           long:
-            "Il software standard e spesso piu economico all'inizio, ma puo generare costi nascosti: adattare il flusso, workaround, strumenti extra o report limitati. Praxis e per chi vuole un flusso coerente. Standard/low-code va bene se il processo e per lo piu standard, usi pochi template/modelli personalizzati e accetti workaround. Praxis e migliore se la metodologia guida, i tuoi template/modelli sono centrali, vuoi crescere a step e l'ownership e importante.",
+            "Lo standard è spesso più economico all'inizio, ma può creare costi nascosti: adattare il modo di lavorare, workaround, strumenti extra a lato o reportistica limitata. Praxis è per gli studi che preferiscono un workflow che combaci davvero. Standard/low-code spesso va bene se: il processo è in gran parte standard, usi pochi modelli/template personali e puoi convivere con workaround. Praxis è più adatto se: la metodologia è centrale, i tuoi template/modelli sono importanti, vuoi crescere a step e ownership/trasferibilità contano.",
         },
         {
-          q: "Low-code non e il futuro?",
-          short: "Risposta breve: Il low-code e utile, ma non sempre e la soluzione migliore per dati sensibili e flussi specifici.",
+          q: "Il low-code non è il futuro?",
+          short: "Risposta breve: Il low-code è utile, ma non sempre è la scelta migliore per dati sensibili e un modo di lavorare specifico.",
           long:
-            "Il low-code e mainstream e in molti casi una buona scelta. Praxis non e anti low-code; e pensato per situazioni in cui servono piu liberta, migliore fit, sicurezza/privacy e meno vincoli - soprattutto con dati sensibili e flussi che devono essere precisi.",
+            "Il low-code è mainstream e in molte situazioni può essere un'ottima scelta. Praxis non è contro il low-code; è pensato per i casi in cui servono più libertà, migliore aderenza, sicurezza/privacy e meno lock-in - soprattutto con dati cliente e workflow che devono essere precisi.",
         },
         {
           q: "E se lo sviluppatore non fosse disponibile?",
-          short: "Risposta breve: La continuita e garantita da trasferibilita e accordi chiari.",
+          short: "Risposta breve: La continuità è garantita da trasferibilità e accordi chiari.",
           long:
-            "Lavori con uno specialista dedicato: linee dirette e velocita. Al tempo stesso, la continuita e importante. Per questo IDEX garantisce trasferibilita con: 1) documentazione e struttura repo chiara 2) passaggio alla consegna 3) build riproducibili e accordi di test/accettazione 4) accordi su hosting e accessi. Se necessario, possiamo coinvolgere temporaneamente partner/freelancer fidati (con tuo consenso).",
+            "Lavori con uno specialista dedicato: comunicazione diretta e velocità. Allo stesso tempo, la continuità è importante. Per questo IDEX garantisce trasferibilità con: 1) documentazione e struttura repository chiara 2) momento di passaggio alla consegna 3) build riproducibili e accordi di test/accettazione 4) accordi su accesso a hosting e account. Se necessario, può essere coinvolta temporaneamente capacità aggiuntiva da una piccola rete di freelancer/partner abituali (solo con approvazione).",
         },
         {
           q: "Pausa o annullamento?",
           short: "Risposta breve: Sempre possibile; il lavoro svolto viene fatturato.",
           long:
-            "Mettere in pausa o annullare e sempre possibile: il lavoro svolto viene completato e fatturato; quello non iniziato viene cancellato; codice sorgente e documentazione possono essere consegnati.",
+            "Mettere in pausa o annullare è sempre possibile: il lavoro svolto viene completato e fatturato; il lavoro non iniziato viene annullato; codice sorgente e documentazione possono essere consegnati.",
         },
       ],
       ctaTitle: "Hai ancora una domanda?",
-      ctaBody: "Scrivimi pure. Ti aiuto a scegliere il prossimo passo migliore.",
+      ctaBody: "Scrivimi pure. Ci penso con te e ti dico rapidamente qual è il primo passo migliore.",
     },
+
     contact: {
-      title: "Contatti",
-      kicker: "Contatti",
-      intro: "Prenota una call o invia un messaggio.",
+      title: "Contatto",
+      kicker: "Contatto",
+      intro: "Pianifica una conoscenza o invia la tua domanda. Rispondo rapidamente (di solito entro 1 giorno lavorativo).",
       company: "IDEX Praxis",
       address: ["Jonagoldstraat 65", "6515 EN Nijmegen", "Paesi Bassi"],
       phoneLabel: "+31 (0)24 207 0032",
@@ -888,8 +1025,8 @@ export const copy = {
         message: "Messaggio",
       },
       formSubmit: "Invia",
-      formNote: "Il messaggio verra inviato in modo sicuro a info@idexpraxis.nl.",
-      formSuccess: "Grazie! Il tuo messaggio e stato inviato.",
+      formNote: "Il tuo messaggio viene inviato in modo sicuro a info@idexpraxis.nl.",
+      formSuccess: "Grazie! Il tuo messaggio è stato inviato.",
     },
     root: {
       title: "IDEX Praxis",
