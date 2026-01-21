@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { langFromParams, t, withLang, SUPPORTED } from "../../lib/i18n";
+
+export const prerender = true;
+export const getStaticPaths = () => SUPPORTED.map((lang) => ({ params: { lang } }));
+
+const lang = langFromParams(Astro.params);
+const c = t(lang);
+const metaTitle =
+  lang === "nl"
+    ? "Clientenbeheer software voor praktijken | IDEX Praxis"
+    : "Client management software | IDEX Praxis";
+const metaDesc =
+  lang === "nl"
+    ? "Clientenbeheer software met intake, trajecten en verslaglegging in een veilige omgeving. Overdraagbaar en zonder lock-in."
+    : "Client management software for practices with secure workflows.";
+---
+<BaseLayout title={metaTitle} description={metaDesc} lang={lang}>
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <div class="kicker">IDEX Praxis</div>
+        <h1 class="hero-title" style="margin-top:12px;">Clientenbeheer software</h1>
+        <p style="margin-top:14px; max-width:92ch;">
+          Clientenbeheer software die jouw werkwijze volgt. Intake, trajecten, oefeningen en
+          verslaglegging op een plek, met duidelijke rollen en veilige toegang.
+        </p>
+
+        <div class="grid cards-3" style="margin-top:18px;">
+          <div class="card" style="box-shadow:none;">
+            <h3>Intake en trajecten</h3>
+            <p style="margin-top:10px;">
+              Overzichtelijke stappen met duidelijke doelen, status en voortgang.
+            </p>
+          </div>
+          <div class="card" style="box-shadow:none;">
+            <h3>Verslaglegging</h3>
+            <p style="margin-top:10px;">
+              Eenvoudige rapportage en exports zonder extra administratie.
+            </p>
+          </div>
+          <div class="card" style="box-shadow:none;">
+            <h3>Overdraagbaar</h3>
+            <p style="margin-top:10px;">
+              Documentatie en broncode inbegrepen, geen vendor lock-in.
+            </p>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2>Trajectondersteuning met software</h2>
+        <p style="margin-top:12px; max-width:92ch;">
+          We starten klein met een kernworkflow en breiden uit wanneer dat nodig is. Zo automatiseer
+          je zonder dat jouw praktijk zich hoeft aan te passen aan standaardsoftware.
+        </p>
+
+        <div class="btn-row" style="margin-top:16px;">
+          <a class="btn btn-primary" href={withLang(lang, "contact")}>{c.cta.kennismaking}</a>
+          <a class="btn" href={withLang(lang, "aanbod")}>{c.cta.aanbod}</a>
+          <a class="btn" href={withLang(lang, "cases")}>{c.cta.cases}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    lang={lang}
+    title="Wil je clientenbeheer verbeteren?"
+    body="Plan een kennismaking en bepaal samen de beste eerste stap."
+    primaryHref={withLang(lang, "contact")}
+    primaryLabel={c.cta.kennismaking}
+    secondaryHref={withLang(lang, "aanbod")}
+    secondaryLabel={c.cta.scan}
+  />
+</BaseLayout>

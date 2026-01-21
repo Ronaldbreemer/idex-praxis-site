@@ -31,8 +31,16 @@ if (herkenbaarBulletParts.length > 3) {
   herkenbaarBulletParts.length = 3;
 }
 const herkenbaarBullets = herkenbaarBulletParts;
+const metaTitle =
+  lang === "nl"
+    ? "Praktijksoftware: cliëntenbeheer & trajectondersteuning automatiseren | IDEX Praxis"
+    : c.meta.title;
+const metaDesc =
+  lang === "nl"
+    ? "Praktijksoftware voor cliëntenbeheer en trajectondersteuning, veilig en overdraagbaar. Intake via mail of telefoon."
+    : c.meta.desc;
 ---
-<BaseLayout title={c.meta.title} description={c.meta.desc} lang={lang}>
+<BaseLayout title={metaTitle} description={metaDesc} lang={lang}>
   <section class="section hero">
     <div class="container">
       <div class="hero-inner">

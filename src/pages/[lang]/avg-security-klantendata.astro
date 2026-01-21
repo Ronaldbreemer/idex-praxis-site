@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { langFromParams, t, withLang, SUPPORTED } from "../../lib/i18n";
+
+export const prerender = true;
+export const getStaticPaths = () => SUPPORTED.map((lang) => ({ params: { lang } }));
+
+const lang = langFromParams(Astro.params);
+const c = t(lang);
+const metaTitle =
+  lang === "nl"
+    ? "AVG en security klantendata voor praktijksoftware | IDEX Praxis"
+    : "Client data security and GDPR | IDEX Praxis";
+const metaDesc =
+  lang === "nl"
+    ? "AVG en security voor klantendata: rollen, logging en bewaartermijnen. Praktijksoftware veilig en overdraagbaar."
+    : "Client data security and GDPR aligned workflows.";
+---
+<BaseLayout title={metaTitle} description={metaDesc} lang={lang}>
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <div class="kicker">IDEX Praxis</div>
+        <h1 class="hero-title" style="margin-top:12px;">AVG en security klantendata</h1>
+        <p style="margin-top:14px; max-width:92ch;">
+          Privacy en security zijn onderdeel van de scope. We werken met rolgebaseerde toegang,
+          logging en afspraken over bewaartermijnen en hosting.
+        </p>
+
+        <div class="grid cards-3" style="margin-top:18px;">
+          <div class="card" style="box-shadow:none;">
+            <h3>Rollen en rechten</h3>
+            <p style="margin-top:10px;">
+              Alleen toegang voor de juiste personen en functies binnen jouw praktijk.
+            </p>
+          </div>
+          <div class="card" style="box-shadow:none;">
+            <h3>Logging en audits</h3>
+            <p style="margin-top:10px;">
+              Inzicht in wie wat doet, met duidelijke audit trails.
+            </p>
+          </div>
+          <div class="card" style="box-shadow:none;">
+            <h3>Bewaartermijnen</h3>
+            <p style="margin-top:10px;">
+              Heldere afspraken en ondersteuning voor AVG procedures.
+            </p>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2>Security-by-design in de praktijk</h2>
+        <p style="margin-top:12px; max-width:92ch;">
+          We bouwen met open source componenten, kunnen hosten in de EU en leveren documentatie
+          en broncode mee. Zo blijf je in controle en ben je niet afhankelijk van een leverancier.
+        </p>
+
+        <div class="btn-row" style="margin-top:16px;">
+          <a class="btn btn-primary" href={withLang(lang, "contact")}>{c.cta.kennismaking}</a>
+          <a class="btn" href={withLang(lang, "werkwijze")}>{c.nav.werkwijze}</a>
+          <a class="btn" href={withLang(lang, "faq")}>{c.cta.faq}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    lang={lang}
+    title="Vragen over AVG en security?"
+    body="Plan een kennismaking en we lopen je situatie samen door."
+    primaryHref={withLang(lang, "contact")}
+    primaryLabel={c.cta.kennismaking}
+    secondaryHref={withLang(lang, "werkwijze")}
+    secondaryLabel={c.nav.werkwijze}
+  />
+</BaseLayout>

@@ -9,7 +9,9 @@ const c = t("nl");
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
     <title>{c.root.title}</title>
-    <meta http-equiv="refresh" content="1; url=/en/" />
+    <style>
+      body{opacity:0;}
+    </style>
   </head>
   <body>
     <script>
@@ -20,20 +22,25 @@ const c = t("nl");
           var target = "/" + lang + "/";
           if (location.pathname === "/" && location.search.indexOf("noredirect=1") === -1) {
             location.replace(target + location.search + location.hash);
+            return;
           }
+          document.body.style.opacity = "1";
         } catch (e) {}
       })();
     </script>
 
     <!-- Fallback als JS uit staat -->
-    <div style="font-family: system-ui; padding: 20px;">
-      <h1>{c.root.title}</h1>
-      <p>{c.root.chooseLanguage}</p>
-      <ul>
-        <li><a href="/nl/">{c.root.languages.nl}</a></li>
-        <li><a href="/en/">{c.root.languages.en}</a></li>
-        <li><a href="/it/">{c.root.languages.it}</a></li>
-      </ul>
-    </div>
+    <noscript>
+      <style>body{opacity:1;}</style>
+      <div style="font-family: system-ui; padding: 20px;">
+        <h1>{c.root.title}</h1>
+        <p>{c.root.chooseLanguage}</p>
+        <ul>
+          <li><a href="/nl/">{c.root.languages.nl}</a></li>
+          <li><a href="/en/">{c.root.languages.en}</a></li>
+          <li><a href="/it/">{c.root.languages.it}</a></li>
+        </ul>
+      </div>
+    </noscript>
   </body>
 </html>
