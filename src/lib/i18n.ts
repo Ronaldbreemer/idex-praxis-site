@@ -343,7 +343,7 @@ export const copy = {
       phoneLabel: "+31 (0)24 207 0032",
       phoneTel: "+31242070032",
       email: "info@idexpraxis.nl",
-      kvk: "KVK nr.: (vul in)",
+      kvk: "KVK nr.: 99623781",
       btw: "BTW: (vul in)",
       formTitle: "Stuur een bericht",
       formPlaceholders: {
@@ -679,7 +679,7 @@ export const copy = {
       phoneLabel: "+31 (0)24 207 0032",
       phoneTel: "+31242070032",
       email: "info@idexpraxis.nl",
-      kvk: "Chamber of Commerce: (fill in)",
+      kvk: "Chamber of Commerce: 99623781",
       btw: "VAT: (fill in)",
       formTitle: "Send a message",
       formPlaceholders: {
@@ -1016,7 +1016,7 @@ export const copy = {
       phoneLabel: "+31 (0)24 207 0032",
       phoneTel: "+31242070032",
       email: "info@idexpraxis.nl",
-      kvk: "Registro imprese: (compila)",
+      kvk: "Registro imprese: 99623781",
       btw: "IVA: (compila)",
       formTitle: "Invia un messaggio",
       formPlaceholders: {
