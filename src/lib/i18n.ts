@@ -114,7 +114,7 @@ export const copy = {
         "Standaardsoftware is voor iedereen. Praxis bouwen we voor uw praktijk.",
       watJeKrijgtBullets: [
         "Eerste werkende versie van uw kernstappen (snel resultaat).",
-        "Sjablonen en eigen formulieren, vragenlijsten en schema's die passen bij uw aanpak.",
+        "Formulieren, vragenlijsten en schema's die passen bij uw aanpak.",
         "Makkelijk verslag maken en eenvoudig exporteren/rapporteren.",
         "Overdraagbaar: documentatie + broncode + overdracht (geen lock-in).",
         "Later uitbreiden als het nodig is. Nazorg op afroep (geen abonnement).",
@@ -151,7 +151,7 @@ export const copy = {
         steps: ["Kennismaking", "Plan van aanpak", "Bouw & testen", "Oplevering"],
       },
       bullets: [
-        ["Eerst uw proces", "Uw proces, sjablonen en eigen formulieren staan centraal. De techniek volgt."],
+        ["Eerst uw proces", "Uw proces en formulieren staan centraal. De techniek volgt."],
         ["Duidelijk traject", "Duidelijke scope en vaste prijs, met mijlpalen en acceptatiecriteria."],
         ["Privacy en veiligheid ingebouwd", "Voor gevoelige cliëntgegevens, met rollen en rechten en heldere afspraken."],
         ["Overdraagbaar, geen lock-in", "Documentatie, broncode en overdracht zijn standaard inbegrepen."],
@@ -187,7 +187,7 @@ export const copy = {
       table: [
         ["Start", "Snel, maar vaak op de manier van de de aangeboden software", "Klein starten met uw kernstappen"],
         ["Workflow", "U past uw werkwijze aan", "Software volgt uw werkwijze"],
-        ["Eigen sjablonen/formulieren/modellen", "Beperkt of via omwegen", "Zoals u werkt"],
+        ["Eigen formulieren/modellen", "Beperkt of via omwegen", "Zoals u werkt"],
         ["Overzicht", "Vaak extra tools nodig", "Eén duidelijke werkwijze"],
         ["Uitbreiden", "Afhankelijk van leverancier", "Op basis van gebruik en impact"],
         ["Eigenaarschap", "Het gevaar dat u vastzit aan één leverancier", "Overdraagbaar (broncode + documentatie + overdracht)"],
@@ -215,7 +215,7 @@ export const copy = {
         },
         {
           t: "Praxis MVP (eerste werkbare versie)",
-          d: "Een eerste werkende versie van uw belangrijkste proces (zoals aanmelden -> afspraak -> verslag), compleet met uw eigen sjablonen en de juiste toegangsrechten voor uw medewerkers. Daarna kunt u stap voor stap en in uw eigen tempo uitbreiden.",
+          d: "Een eerste werkende versie van uw belangrijkste proces (zoals aanmelden -> afspraak -> verslag), compleet met uw eigen formulieren en de juiste toegangsrechten voor uw medewerkers. Daarna kunt u stap voor stap en in uw eigen tempo uitbreiden.",
           price: "Vanaf €1.500",
         },
       ],
@@ -287,13 +287,13 @@ export const copy = {
           q: "Kan dit aansluiten op mijn huidige werkwijze?",
           short: "Kort antwoord: Ja. Onze software volgt uw manier van werken, niet andersom.",
           long:
-            "Veel praktijken hebben een eigen unieke aanpak en eigen formulieren. Daarom beginnen we klein: we kiezen samen één belangrijk proces (bijvoorbeeld: aanmelding -> afspraak -> verslag) dat direct rust en tijdwinst geeft. We bouwen de invulvelden, sjablonen en stappen precies zoals u ze nu al gebruikt, en u test tussentijds steeds mee. Zo ontstaat software die in de praktijk echt prettig werkt.",
+            "Veel praktijken hebben een eigen unieke aanpak en eigen formulieren. Daarom beginnen we klein: we kiezen samen één belangrijk proces (bijvoorbeeld: aanmelding -> afspraak -> verslag) dat direct rust en tijdwinst geeft. We bouwen de invulvelden, formulieren en stappen precies zoals u ze nu al gebruikt, en u test tussentijds steeds mee. Zo ontstaat software die in de praktijk echt prettig werkt.",
         },
         {
           q: "Wat kost het en hoe snel kan het live?",
           short: "Kort antwoord: U krijgt vooraf volledige duidelijkheid. Een eerste werkende versie kost vaak tussen de € 2.500 en € 6.000.",
           long:
-            "De investering hangt af van hoe uitgebreid het systeem moet worden en hoeveel verschillende soorten gebruikers en sjablonen u nodig heeft. Meestal is de eerste versie binnen enkele weken klaar voor gebruik. Wilt u liever heel voorzichtig beginnen? Start dan met de Praxis Scan (€ 750). Dit bedrag trekken we af van de uiteindelijke rekening als u daarna met ons doorgaat.",
+            "De investering hangt af van hoe uitgebreid het systeem moet worden en hoeveel verschillende soorten gebruikers en formulieren u nodig heeft. Meestal is de eerste versie binnen enkele weken klaar voor gebruik. Wilt u liever heel voorzichtig beginnen? Start dan met de Praxis Scan (€ 750). Dit bedrag trekken we af van de uiteindelijke rekening als u daarna met ons doorgaat.",
         },
         {
           q: "Wat als ik later wil uitbreiden?",
