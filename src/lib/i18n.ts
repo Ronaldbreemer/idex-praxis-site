@@ -159,7 +159,7 @@ export const copy = {
       ],
       continuityTitle: "Continuiteit (goed geborgd)",
       continuityBody:
-        "U werkt met één vaste specialist: korte lijnen en snel schakelen. Tegelijk zorgen we dat alles makkelijk over te nemen is: duidelijke uitleg, een overzichtelijke projectmap en stappen om alles opnieuw op te zetten. Ook spreken we af wie toegang heeft tot de server en accounts. Zo kan iemand anders het makkelijk overnemen als dat nodig is.",
+        "U werkt met één vaste specialist: korte lijnen en snel schakelen. We schrijven alles op en zetten het netjes in mappen. Ook spreken we af wie toegang heeft tot de systemen en inloggegevens. Zo kan iemand anders het overnemen als dat nodig is.",
       ctaTitle: "Kies samen de beste eerste stap om te starten.",
       ctaBody: "Plan een kennismaking (15 min). Dan weet u snel wat een slimme eerste stap is.",
     },
@@ -323,7 +323,7 @@ export const copy = {
           q: "Wat als de ontwikkelaar uitvalt?",
           short: "Kort antwoord: Ja. Alles is zo ingericht dat het over te nemen is.",
           long:
-            "U werkt met één vaste specialist voor korte lijnen en snelheid. Tegelijk zorgen we dat alles makkelijk over te nemen is: duidelijke uitleg, een overzichtelijke projectmap en stappen om alles opnieuw op te zetten. Ook spreken we af wie toegang heeft tot de server en accounts. Als het nodig is, kan een andere specialist het direct overnemen. Extra hulp is altijd mogelijk in overleg.",
+            "U werkt met één vaste specialist voor korte lijnen en snelheid. We schrijven alles op en zetten het netjes in mappen. Ook spreken we af wie toegang heeft tot de systemen en inloggegevens. Als het nodig is, kan een andere specialist het overnemen. Extra hulp is altijd mogelijk in overleg.",
         },
         {
           q: "Pauzeren of annuleren?",
