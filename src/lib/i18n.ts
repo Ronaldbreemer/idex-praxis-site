@@ -169,8 +169,8 @@ export const copy = {
       kicker: "Vergelijking",
       intro:
         "Standaard praktijksoftware is prima als uw werkwijze grotendeels standaard is. Praxis is er voor praktijken die een werkwijze willen die echt past bij de dagelijkse praktijk.",
-      tableHeadings: ["Onderdeel", "Standaard / low-code", "IDEX Praxis"],
-      whenStdTitle: "Wanneer past standaardsoftware of low-code?",
+      tableHeadings: ["Onderdeel", "Standaardsoftware", "IDEX Praxis"],
+      whenStdTitle: "Wanneer past standaardsoftware?",
       whenStd: [
         "Uw proces is grotendeels standaard.",
         "U gebruikt weinig eigen templates of modellen.",
