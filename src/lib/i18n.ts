@@ -65,7 +65,7 @@ export const copy = {
       stats: [
         { n: "15", l: "min. kennismaking" },
         { n: "1", l: "stap om te starten" },
-        { n: "0", l: "vast aan een leverancier" },
+        { n: "0", l: "niet-vast-aan-een-leverancier" },
       ],
     },
     footer: {
@@ -82,7 +82,7 @@ export const copy = {
       scanHint:
         "Praxis Scan: een helder ontwerp + tijdpad in 1–2 weken (wij verrekenen dit als u doorgaat).",
       heroOrbTitle: "Werkwijze - Rust - Tijdwinst",
-      heroOrbBody: "Geen gedoe. Niet vast aan een leverancier. Een heldere basis die werkt.",
+      heroOrbBody: "Geen gedoe. Niet-vast-aan-een-leverancier. Een heldere basis die werkt.",
       heroOrbExample: "Intake -> plan -> sessies -> verslag -> export",
       heroOrbUi: {
         header: "Intake - Eerste afspraak",
@@ -103,7 +103,7 @@ export const copy = {
       stats: [
         { n: "1", l: "belangrijkste stap eerst" },
         { n: "EU", l: "opslag mogelijk" },
-        { n: "0", l: "vast aan een leverancier" },
+        { n: "0", l: "niet-vast-aan-een-leverancier" },
         { n: "100%", l: "overdraagbaar" },
       ],
       herkenbaarTitle: "Herkenbaar?",
@@ -116,7 +116,7 @@ export const copy = {
         "Eerste werkende versie van uw belangrijkste proces (snel resultaat).",
         "Formulieren, vragenlijsten en schema's die passen bij uw aanpak.",
         "Makkelijk verslag maken en eenvoudig exporteren/rapporteren.",
-        "Overdraagbaar: documentatie + broncode + overdracht (niet vast aan een leverancier).",
+        "Overdraagbaar: documentatie + de code + overdracht (niet-vast-aan-een-leverancier).",
         "Later uitbreiden als het nodig is. Nazorg op afroep (geen abonnement).",
       ],
       tooltipTitle: "Open source & EU-hosting (wat is dat?)",
@@ -128,11 +128,11 @@ export const copy = {
         ["Plan van aanpak", "We selecteren de belangrijkste werkstappen die direct resultaat opleveren."],
         ["Voorstel met vaste prijs", "Duidelijkheid over wat we maken, de planning, de voorwaarden en een vast bedrag."],
         ["Bouwen in duidelijke stappen", "U test tussentijds mee, zodat we direct kunnen bijsturen binnen het gemaakte plan."],
-        ["Oplevering + overdracht", "Documentatie en broncode. Overdracht en nazorg op afroep."],
+        ["Oplevering + overdracht", "Documentatie en de code. Overdracht en nazorg op afroep."],
       ],
       prijsTitle: "Prijsindicatie (eerste versie)",
       prijsBody:
-        "Een eerste werkende versie van één kernworkflow (bijv. intake + verslag of afspraken + verslag) is vaak vanaf €1.500. De prijs hangt af van rollen, formulieren en rapportage. Wilt u eerst zekerheid? Dan is er de Praxis Scan (€750). Die verrekenen we als u doorgaat.",
+        "Een eerste werkende versie van één belangrijk proces (bijv. intake + verslag of afspraken + verslag) is vaak vanaf €1.500. De prijs hangt af van rollen, formulieren en rapportage. Wilt u eerst zekerheid? Dan is er de Praxis Scan (€750). Die verrekenen we als u doorgaat.",
       securityTitle: "Veiligheid & privacy",
       securityBody:
         "Privacy en veiligheid nemen we mee vanaf het begin. Minimaal: rollen en rechten, logging, back-ups, veilige wachtwoorden en duidelijke afspraken over hosting en subverwerkers. Waar nodig is er een verwerkersovereenkomst.",
@@ -154,7 +154,7 @@ export const copy = {
         ["Eerst uw proces", "Uw proces en formulieren staan centraal. De techniek volgt."],
         ["Duidelijk traject", "Duidelijke afspraken en een vaste prijs, met stappen en heldere opleverpunten."],
         ["Privacy en veiligheid ingebouwd", "Voor gevoelige cliëntgegevens, met rollen en rechten en heldere afspraken."],
-        ["Overdraagbaar, niet vast aan een leverancier", "Documentatie, broncode en overdracht zijn standaard inbegrepen."],
+        ["Overdraagbaar, niet-vast-aan-een-leverancier", "Documentatie, de code en overdracht zijn standaard inbegrepen."],
         ["Nazorg zonder verplichting", "Onderhoud en doorontwikkeling op afroep. Geen abonnement."],
       ],
       continuityTitle: "Continuiteit (goed geborgd)",
@@ -181,7 +181,7 @@ export const copy = {
         "Uw intake, sessies en verslag zijn leidend.",
         "U wilt vragenlijsten, schema's en modellen zoals u werkt.",
         "U wilt minder losse programma's en meer overzicht.",
-        "U wilt zelf eigenaar zijn en kunnen overstappen (niet vast aan een leverancier).",
+        "U wilt zelf eigenaar zijn en kunnen overstappen (niet-vast-aan-een-leverancier).",
       ],
       tableTitle: "Korte vergelijking",
       table: [
@@ -190,7 +190,7 @@ export const copy = {
         ["Eigen formulieren/modellen", "Beperkt of via omwegen", "Zoals u werkt"],
         ["Overzicht", "Vaak extra programma's nodig", "Eén duidelijke werkwijze"],
         ["Uitbreiden", "Afhankelijk van leverancier", "Op basis van gebruik en impact"],
-        ["Eigenaarschap", "Het gevaar dat u vastzit aan één leverancier", "Overdraagbaar (broncode + documentatie + overdracht)"],
+        ["Eigenaarschap", "Het gevaar dat u vastzit aan één leverancier", "Overdraagbaar (de code + documentatie + overdracht)"],
       ],
       ctaTitle: "Twijfelt u wat bij u past?",
       ctaBody:
@@ -242,22 +242,22 @@ export const copy = {
             "Geen vaste stappen: intake -> sessie -> evaluatie",
             "Modellen uitwerken kost veel tijd",
           ],
-          o: "Oplossing: Praxis MVP met intake -> sessie -> verslag -> overzicht, met eigen velden en formulieren.",
+          o: "Oplossing: een eerste versie met intake -> sessie -> verslag -> overzicht, met eigen invulvelden en formulieren.",
           r: ["Overzicht per traject", "Sneller verslag door vaste opbouw", "Basis om later uit te breiden"],
         },
         {
           t: "Voorbeeld 2 - Eigen formulieren en werkwijze, zonder omwegen",
           s: "Situatie: u werkt met een eigen methodiek: modellen, vragenlijsten en evaluaties. Standaardsoftware past net niet.",
-          k: ["Templates passen niet goed in standaardvelden", "Omwegen met exports en losse documenten", "Rapportage kost te veel handwerk"],
-          o: "Oplossing: formulieren en vragenlijsten zoals u werkt, met een duidelijke werkwijze en eenvoudige export.",
+          k: ["Templates passen niet goed in standaardvelden", "Omwegen met exportjes en losse documenten", "Rapportage kost te veel handwerk"],
+          o: "Oplossing: formulieren en vragenlijsten zoals u werkt, met een duidelijke werkwijze en makkelijk downloaden.",
           r: ["Minder dubbele administratie", "Vaste structuur per traject", "Meer rust: alles in één werkwijze"],
         },
         {
           t: "Voorbeeld 3 - Privacy en toegang: cliëntgegevens veilig geregeld",
           s: "Situatie: u wilt AVG goed regelen, met rollen en rechten en eigenaarschap.",
           k: ["Onzekerheid over waar data staat en wie erbij kan", "Rollen en rechten nodig (wie mag wat zien)"],
-          o: "Oplossing: rollen en rechten (wie mag wat zien en doen), duidelijke afspraken over opslag en toegang, en overdraagbare oplevering (broncode + documentatie).",
-          r: ["Duidelijke afspraken (rust en vertrouwen)", "Goede basis voor gevoelige gegevens", "Niet vast aan een leverancier"],
+          o: "Oplossing: rollen en rechten (wie mag wat zien en doen), duidelijke afspraken over opslag en toegang, en overdraagbare oplevering (de code + documentatie).",
+          r: ["Duidelijke afspraken (rust en vertrouwen)", "Goede basis voor gevoelige gegevens", "Niet-vast-aan-een-leverancier"],
         },
       ],
       ctaTitle: "Klaar om te starten?",
@@ -281,7 +281,7 @@ export const copy = {
           long:
             "Afhankelijk van uw voorkeur bewaren we de gegevens op een veilige plek binnen Europa – bijvoorbeeld in Duitsland – met een strikt beveiligde database en heldere beheerafspraken. U ontvangt de handleiding en de digitale bouwtekening, zodat u altijd de baas blijft over uw eigen gegevens en niet vastzit aan één bedrijf.",
           note:
-            "Eerlijk gebouwd & opslag in Europa: transparant ontwikkeld met vrije technieken en (optioneel) bewaard in Duitsland. Inclusief handleiding en broncode, zodat u nooit afhankelijk bent van één leverancier.",
+            "Eerlijk gebouwd & opslag in Europa: transparant ontwikkeld met vrije technieken en (optioneel) bewaard in Duitsland. Inclusief handleiding en de code, zodat u nooit afhankelijk bent van één leverancier.",
         },
         {
           q: "Kan dit aansluiten op mijn huidige werkwijze?",
