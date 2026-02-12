@@ -148,7 +148,7 @@ export const copy = {
         "Software die werkt zoals u werkt: veilig, overzichtelijk en overdraagbaar. Geen eindeloze lijst functies, maar een duidelijke werkwijze die rust en tijdwinst geeft. U start klein en breidt pas uit als het nodig is.",
       miniFlow: {
         title: "Mijlpalen",
-        steps: ["Kennismaking", "Scope-schets", "Bouw & testen", "Oplevering"],
+        steps: ["Kennismaking", "Plan van aanpak", "Bouw & testen", "Oplevering"],
       },
       bullets: [
         ["Eerst uw proces", "Uw proces, sjablonen en eigen formulieren staan centraal. De techniek volgt."],
