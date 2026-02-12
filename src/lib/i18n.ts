@@ -152,7 +152,7 @@ export const copy = {
       },
       bullets: [
         ["Eerst uw proces", "Uw proces en formulieren staan centraal. De techniek volgt."],
-        ["Duidelijk traject", "Duidelijke scope en vaste prijs, met mijlpalen en acceptatiecriteria."],
+        ["Duidelijk traject", "Duidelijke afspraken en een vaste prijs, met stappen en heldere opleverpunten."],
         ["Privacy en veiligheid ingebouwd", "Voor gevoelige cliëntgegevens, met rollen en rechten en heldere afspraken."],
         ["Overdraagbaar, geen lock-in", "Documentatie, broncode en overdracht zijn standaard inbegrepen."],
         ["Nazorg zonder verplichting", "Onderhoud en doorontwikkeling op afroep. Geen abonnement."],
