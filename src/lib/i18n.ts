@@ -160,7 +160,7 @@ export const copy = {
       continuityTitle: "Continuiteit (goed geborgd)",
       continuityBody:
         "U werkt met één vaste specialist: korte lijnen en snel schakelen. Tegelijk zorgen we dat alles makkelijk over te nemen is: duidelijke uitleg, een overzichtelijke projectmap en stappen om alles opnieuw op te zetten. Ook spreken we af wie toegang heeft tot de server en accounts. Zo kan iemand anders het makkelijk overnemen als dat nodig is.",
-      ctaTitle: "Kies samen de beste eerste kernstappen.",
+      ctaTitle: "Kies samen de beste eerste stap om te starten.",
       ctaBody: "Plan een kennismaking (15 min). Dan weet u snel wat een slimme eerste stap is.",
     },
 
