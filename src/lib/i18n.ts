@@ -64,7 +64,7 @@ export const copy = {
       badgeSubtitle: "Eerste versie",
       stats: [
         { n: "15", l: "min. kennismaking" },
-        { n: "1", l: "kernstappen" },
+        { n: "1", l: "eerste stap" },
         { n: "0", l: "vastzitten" },
       ],
     },
