@@ -77,9 +77,10 @@ export const copy = {
       heroKicker: "Praktijksoftware op maat",
       heroTitle: "Praktijksoftware die werkt zoals u werkt.",
       heroSub:
-        "Eén veilige plek voor intake, trajecten en voortgang. Zonder dat u uw werkwijze hoeft aan te passen aan een standaardpakket.",
+        "Eén veilige plek voor intake, trajecten en voortgang. Zonder dat u uw werkwijze hoeft aan te passen aan standaardsoftware.",
       heroForWho: "Voor o.a. fysiotherapie, psychologie, coaching en kleine praktijken.",
-      scanHint: "Praxis Scan: plan + stappenplan in 1–2 weken (we verrekenen dit als u doorgaat).",
+      scanHint:
+        "Praxis Scan: een helder ontwerp + tijdpad in 1–2 weken (wij verrekenen dit als u doorgaat).",
       heroOrbTitle: "Werkwijze - Rust - Tijdwinst",
       heroOrbBody: "Geen gedoe, geen lock-in. Een heldere basis die werkt.",
       heroOrbExample: "Intake -> plan -> sessies -> verslag -> export",
@@ -100,7 +101,7 @@ export const copy = {
         { t: "Werkwijze op maat", d: "Intake -> doelen -> sessies -> oefeningen -> evaluatie. Of uw eigen volgorde." },
       ],
       stats: [
-        { n: "1", l: "eerst kernstappen" },
+        { n: "1", l: "belangrijkste stap eerst" },
         { n: "EU", l: "hosting mogelijk" },
         { n: "0", l: "vastzitten" },
         { n: "100%", l: "overdraagbaar" },
