@@ -159,7 +159,7 @@ export const copy = {
       ],
       continuityTitle: "Continuiteit (goed geborgd)",
       continuityBody:
-        "U werkt met één vaste specialist: korte lijnen en snelheid. Tegelijk borgen we continuiteit met overdraagbaarheid: documentatie, duidelijke repository-structuur, herhaalbare builds en afspraken over hosting en accounts. Zo kan het overgenomen worden als dat nodig is.",
+        "U werkt met één vaste specialist: korte lijnen en snel schakelen. Tegelijk zorgen we dat alles makkelijk over te nemen is: duidelijke uitleg, een overzichtelijke projectmap en stappen om alles opnieuw op te zetten. Ook spreken we af wie toegang heeft tot de server en accounts. Zo kan iemand anders het makkelijk overnemen als dat nodig is.",
       ctaTitle: "Kies samen de beste eerste kernstappen.",
       ctaBody: "Plan een kennismaking (15 min). Dan weet u snel wat een slimme eerste stap is.",
     },
@@ -321,9 +321,9 @@ export const copy = {
         },
         {
           q: "Wat als de ontwikkelaar uitvalt?",
-          short: "Kort antwoord: Uw voortgang is veiliggesteld door duidelijke overdrachtsdocumenten.",
+          short: "Kort antwoord: Ja. Alles is zo ingericht dat het over te nemen is.",
           long:
-            "U werkt met één vaste specialist voor korte lijnen en snelheid. Tegelijkertijd zorgen we dat alles overdraagbaar is: we leggen alles vast in handleidingen, een duidelijke opbouw van de code en heldere afspraken over de toegang tot de opslag en accounts. Mocht het nodig zijn, dan kan een andere vakman het direct overnemen. Extra hulp is altijd mogelijk in overleg.",
+            "U werkt met één vaste specialist voor korte lijnen en snelheid. Tegelijk zorgen we dat alles makkelijk over te nemen is: duidelijke uitleg, een overzichtelijke projectmap en stappen om alles opnieuw op te zetten. Ook spreken we af wie toegang heeft tot de server en accounts. Als het nodig is, kan een andere specialist het direct overnemen. Extra hulp is altijd mogelijk in overleg.",
         },
         {
           q: "Pauzeren of annuleren?",
