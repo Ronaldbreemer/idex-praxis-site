@@ -102,7 +102,7 @@ export const copy = {
       ],
       stats: [
         { n: "1", l: "belangrijkste stap eerst" },
-        { n: "EU", l: "hosting mogelijk" },
+        { n: "EU", l: "opslag mogelijk" },
         { n: "0", l: "vastzitten" },
         { n: "100%", l: "overdraagbaar" },
       ],
