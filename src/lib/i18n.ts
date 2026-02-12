@@ -64,8 +64,8 @@ export const copy = {
       badgeSubtitle: "Eerste versie",
       stats: [
         { n: "15", l: "min. kennismaking" },
-        { n: "1", l: "eerste stap" },
-        { n: "0", l: "vastzitten" },
+        { n: "1", l: "stap om te starten" },
+        { n: "0", l: "vast aan een leverancier" },
       ],
     },
     footer: {
@@ -82,7 +82,7 @@ export const copy = {
       scanHint:
         "Praxis Scan: een helder ontwerp + tijdpad in 1–2 weken (wij verrekenen dit als u doorgaat).",
       heroOrbTitle: "Werkwijze - Rust - Tijdwinst",
-      heroOrbBody: "Geen gedoe, geen lock-in. Een heldere basis die werkt.",
+      heroOrbBody: "Geen gedoe. Niet vast aan een leverancier. Een heldere basis die werkt.",
       heroOrbExample: "Intake -> plan -> sessies -> verslag -> export",
       heroOrbUi: {
         header: "Intake - Eerste afspraak",
@@ -103,20 +103,20 @@ export const copy = {
       stats: [
         { n: "1", l: "belangrijkste stap eerst" },
         { n: "EU", l: "opslag mogelijk" },
-        { n: "0", l: "vastzitten" },
+        { n: "0", l: "vast aan een leverancier" },
         { n: "100%", l: "overdraagbaar" },
       ],
       herkenbaarTitle: "Herkenbaar?",
       herkenbaarBody:
-        "Werkt u met losse documenten, notities en tools? Dan kost administratie vaak meer tijd dan u denkt. IDEX Praxis brengt structuur: cliëntinformatie, stappen in het traject en oefeningen op één plek. Zo houdt u meer tijd over voor het contact.",
+        "Werkt u met losse documenten, notities en verschillende programma's? Dan kost administratie vaak meer tijd dan u denkt. IDEX Praxis brengt structuur: cliëntinformatie, stappen in het traject en oefeningen op één plek. Zo houdt u meer tijd over voor het contact.",
       watJeKrijgtTitle: "Wat u krijgt",
       watJeKrijgtIntro:
         "Standaardsoftware is voor iedereen. Praxis bouwen we voor uw praktijk.",
       watJeKrijgtBullets: [
-        "Eerste werkende versie van uw kernstappen (snel resultaat).",
+        "Eerste werkende versie van uw belangrijkste proces (snel resultaat).",
         "Formulieren, vragenlijsten en schema's die passen bij uw aanpak.",
         "Makkelijk verslag maken en eenvoudig exporteren/rapporteren.",
-        "Overdraagbaar: documentatie + broncode + overdracht (geen lock-in).",
+        "Overdraagbaar: documentatie + broncode + overdracht (niet vast aan een leverancier).",
         "Later uitbreiden als het nodig is. Nazorg op afroep (geen abonnement).",
       ],
       tooltipTitle: "Open source & EU-hosting (wat is dat?)",
@@ -132,7 +132,7 @@ export const copy = {
       ],
       prijsTitle: "Prijsindicatie (eerste versie)",
       prijsBody:
-        "Een eerste werkende versie van één kernworkflow (bijv. intake + verslag of afspraken + verslag) is vaak vanaf €1.500. De prijs hangt af van rollen, templates en rapportage. Wilt u eerst zekerheid? Dan is er de Praxis Scan (€750). Die verrekenen we als u doorgaat.",
+        "Een eerste werkende versie van één kernworkflow (bijv. intake + verslag of afspraken + verslag) is vaak vanaf €1.500. De prijs hangt af van rollen, formulieren en rapportage. Wilt u eerst zekerheid? Dan is er de Praxis Scan (€750). Die verrekenen we als u doorgaat.",
       securityTitle: "Veiligheid & privacy",
       securityBody:
         "Privacy en veiligheid nemen we mee vanaf het begin. Minimaal: rollen en rechten, logging, back-ups, veilige wachtwoorden en duidelijke afspraken over hosting en subverwerkers. Waar nodig is er een verwerkersovereenkomst.",
@@ -154,7 +154,7 @@ export const copy = {
         ["Eerst uw proces", "Uw proces en formulieren staan centraal. De techniek volgt."],
         ["Duidelijk traject", "Duidelijke afspraken en een vaste prijs, met stappen en heldere opleverpunten."],
         ["Privacy en veiligheid ingebouwd", "Voor gevoelige cliëntgegevens, met rollen en rechten en heldere afspraken."],
-        ["Overdraagbaar, geen lock-in", "Documentatie, broncode en overdracht zijn standaard inbegrepen."],
+        ["Overdraagbaar, niet vast aan een leverancier", "Documentatie, broncode en overdracht zijn standaard inbegrepen."],
         ["Nazorg zonder verplichting", "Onderhoud en doorontwikkeling op afroep. Geen abonnement."],
       ],
       continuityTitle: "Continuiteit (goed geborgd)",
@@ -173,22 +173,22 @@ export const copy = {
       whenStdTitle: "Wanneer past standaardsoftware?",
       whenStd: [
         "Uw proces is grotendeels standaard.",
-        "U gebruikt weinig eigen templates of modellen.",
-        "U vindt workarounds of extra tools oké.",
+        "U gebruikt weinig eigen formulieren of modellen.",
+        "U vindt omwegen of extra programma's prima.",
       ],
       whenIdexTitle: "Wanneer past IDEX Praxis beter?",
       whenIdex: [
         "Uw intake, sessies en verslag zijn leidend.",
         "U wilt vragenlijsten, schema's en modellen zoals u werkt.",
-        "U wilt minder losse tools en meer overzicht.",
-        "U wilt eigenaarschap en overdraagbaarheid (geen lock-in).",
+        "U wilt minder losse programma's en meer overzicht.",
+        "U wilt zelf eigenaar zijn en kunnen overstappen (niet vast aan een leverancier).",
       ],
       tableTitle: "Korte vergelijking",
       table: [
-        ["Start", "Snel, maar vaak op de manier van de de aangeboden software", "Klein starten met uw kernstappen"],
+        ["Start", "Snel, maar vaak op de manier van de de aangeboden software", "Klein starten met uw belangrijkste proces"],
         ["Workflow", "U past uw werkwijze aan", "Software volgt uw werkwijze"],
         ["Eigen formulieren/modellen", "Beperkt of via omwegen", "Zoals u werkt"],
-        ["Overzicht", "Vaak extra tools nodig", "Eén duidelijke werkwijze"],
+        ["Overzicht", "Vaak extra programma's nodig", "Eén duidelijke werkwijze"],
         ["Uitbreiden", "Afhankelijk van leverancier", "Op basis van gebruik en impact"],
         ["Eigenaarschap", "Het gevaar dat u vastzit aan één leverancier", "Overdraagbaar (broncode + documentatie + overdracht)"],
       ],
@@ -237,27 +237,27 @@ export const copy = {
           t: "Voorbeeld 1 - Van losse notities naar één duidelijk cliëntproces",
           s: "Situatie: losse documenten, notities en Excel. Overzicht vinden kost veel tijd.",
           k: [
-            "Info staat verspreid over meerdere tools",
+            "Info staat verspreid over meerdere programma's",
             "Verslagen en voortgang zijn niet overal hetzelfde",
             "Geen vaste stappen: intake -> sessie -> evaluatie",
             "Modellen uitwerken kost veel tijd",
           ],
-          o: "Oplossing: Praxis MVP met intake -> sessie -> verslag -> overzicht, met eigen velden en templates.",
+          o: "Oplossing: Praxis MVP met intake -> sessie -> verslag -> overzicht, met eigen velden en formulieren.",
           r: ["Overzicht per traject", "Sneller verslag door vaste opbouw", "Basis om later uit te breiden"],
         },
         {
-          t: "Voorbeeld 2 - Eigen templates en methodiek, zonder omwegen",
+          t: "Voorbeeld 2 - Eigen formulieren en werkwijze, zonder omwegen",
           s: "Situatie: u werkt met een eigen methodiek: modellen, vragenlijsten en evaluaties. Standaardsoftware past net niet.",
           k: ["Templates passen niet goed in standaardvelden", "Omwegen met exports en losse documenten", "Rapportage kost te veel handwerk"],
-          o: "Oplossing: templates en vragenlijsten zoals u werkt, met een duidelijke werkwijze en eenvoudige export.",
+          o: "Oplossing: formulieren en vragenlijsten zoals u werkt, met een duidelijke werkwijze en eenvoudige export.",
           r: ["Minder dubbele administratie", "Vaste structuur per traject", "Meer rust: alles in één werkwijze"],
         },
         {
           t: "Voorbeeld 3 - Privacy en toegang: cliëntgegevens veilig geregeld",
           s: "Situatie: u wilt AVG goed regelen, met rollen en rechten en eigenaarschap.",
           k: ["Onzekerheid over waar data staat en wie erbij kan", "Rollen en rechten nodig (wie mag wat zien)"],
-          o: "Oplossing: rollen en rechten (RBAC), duidelijke hosting- en toegangsafspraken, en overdraagbare oplevering (broncode + documentatie).",
-          r: ["Duidelijke afspraken (rust en vertrouwen)", "Goede basis voor gevoelige gegevens", "Geen lock-in"],
+          o: "Oplossing: rollen en rechten (wie mag wat zien en doen), duidelijke afspraken over opslag en toegang, en overdraagbare oplevering (broncode + documentatie).",
+          r: ["Duidelijke afspraken (rust en vertrouwen)", "Goede basis voor gevoelige gegevens", "Niet vast aan een leverancier"],
         },
       ],
       ctaTitle: "Klaar om te starten?",
@@ -291,18 +291,18 @@ export const copy = {
         },
         {
           q: "Wat kost het en hoe snel kan het live?",
-          short: "Kort antwoord: U krijgt vooraf volledige duidelijkheid. Een eerste werkende versie kost vaak tussen de € 2.500 en € 6.000.",
+          short: "Kort antwoord: U krijgt vooraf volledige duidelijkheid. Een eerste werkende versie start vaak vanaf € 1.500.",
           long:
             "De investering hangt af van hoe uitgebreid het systeem moet worden en hoeveel verschillende soorten gebruikers en formulieren u nodig heeft. Meestal is de eerste versie binnen enkele weken klaar voor gebruik. Wilt u liever heel voorzichtig beginnen? Start dan met de Praxis Scan (€ 750). Dit bedrag trekken we af van de uiteindelijke rekening als u daarna met ons doorgaat.",
         },
         {
-          q: "Wat als ik later wil uitbreiden?",
+          q: "Wat als u later wilt uitbreiden?",
           short: "Kort antwoord: Dan bouwen we stap voor stap verder op basis van uw behoeften.",
           long:
             "We zorgen eerst dat de basis perfect werkt. Daarna kunt u uitbreiden met extra stappen, formulieren, overzichten of koppelingen met andere systemen. Nieuwe wensen bespreken we vooraf: we maken daar een aparte planning en prijs voor, zodat u altijd precies weet waar u aan toe bent.",
         },
         {
-          q: "Zit ik vast aan jullie?",
+          q: "Zit u vast aan ons?",
           short: "Kort antwoord: Nee. U krijgt alles zo opgeleverd dat u volledig onafhankelijk bent.",
           long:
             "U zit nergens aan vast: de handleiding, de digitale bouwtekening en een officiële overdracht zijn standaard bij de oplevering. Hulp achteraf of verdere uitbreidingen zijn altijd op aanvraag; u zit dus niet vast aan een verplicht abonnement. U blijft de eigenaar en behoudt de volledige regie.",
@@ -334,13 +334,13 @@ export const copy = {
       ],
       
       ctaTitle: "Nog een vraag?",
-      ctaBody: "Stuur gerust een bericht. Ik denk met u mee en laat snel weten wat een goede eerste stap is.",
+      ctaBody: "Stuur gerust een bericht. Wij denken met u mee en laten snel weten wat een goede eerste stap is.",
     },
 
     contact: {
       title: "Contact",
       kicker: "Contact",
-      intro: "Plan een kennismaking of stuur uw vraag. Ik reageer snel (meestal binnen 1 werkdag).",
+      intro: "Plan een kennismaking of stuur uw vraag. Wij reageren snel (meestal binnen 1 werkdag).",
       company: "IDEX Praxis",
       address: ["Jonagoldstraat 65", "6515 EN Nijmegen", "Nederland"],
       phoneLabel: "+31 (0)24 207 0032",
